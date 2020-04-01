@@ -26,14 +26,13 @@ export const workExperience = {
     employer: "WellAware Holdings, Inc",
     startDate: "Sep 2017",
     endDate: "Jun 2018",
-    content: [
-        "Worked with a team of 4-6 people over a period of nine months",
-        "Used the SCRUM development cycle",
-        "Regularly fixed bugs and added features for the user portal and internal configuration software",
-        "Implemented sorting and filtering of customer assets in user portal",
-        "Imported historical data from new customers into the database",
-        "Created a tool for uploading customer images in bulk",
-        "Created custom reports for customers",
-        "Tested and validated user portal application for iOS"
-    ]
+    content: (
+        "I collaborated with a team of full-stack software developers to design, " +
+        "develop, test, and support enterprise software. I participated in all " +
+        "steps of the development lifecycle in an agile environment. I identified " +
+        "and troubleshooted problems in software and resolved them. I learned " +
+        "independently how to work with several front-end and back-end systems. " +
+        "I analysed requirements and developed software solutions in Java, " +
+        "JavaScript, and Python."
+    )
 };
