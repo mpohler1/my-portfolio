@@ -29,10 +29,9 @@ export const workExperience = {
     content: (
         "I collaborated with a team of full-stack software developers to design, " +
         "develop, test, and support enterprise software. I participated in all " +
-        "steps of the development lifecycle in an agile environment. I identified " +
-        "and troubleshooted problems in software and resolved them. I learned " +
-        "independently how to work with several front-end and back-end systems. " +
-        "I analysed requirements and developed software solutions in Java, " +
-        "JavaScript, and Python."
+        "phases of the development lifecycle in an agile environment. I learned " +
+        "independently how to work with and troubleshoot several front-end and  " +
+        "back-end systems. I analysed requirements and translated them into " +
+        "software solutions in Java, JavaScript, and Python."
     )
 };
