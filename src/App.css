@@ -1,0 +1,15 @@
+.bg {
+    background-image: url("./resources/backgroundImage.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.headline {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
