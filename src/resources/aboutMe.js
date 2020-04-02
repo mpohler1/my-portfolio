@@ -32,6 +32,49 @@ export const workExperience = {
         "phases of the development lifecycle in an agile environment. I learned " +
         "independently how to work with and troubleshoot several front-end and  " +
         "back-end systems. I analysed requirements and translated them into " +
-        "software solutions in Java, JavaScript, and Python."
+        "software solutions using Java, JavaScript, and Python."
     )
+};
+
+export const skills = {
+    title: "Skills",
+    content: [
+        {
+            name: "Languages",
+            list: [
+                "Java",
+                "JavaScript",
+                "TypeScript",
+                "Python",
+                "C",
+                "HTML",
+                "CSS",
+                "SQL"
+            ]
+        },
+        {
+            name: "Front-End Tools",
+            list: [
+                "React/Redux",
+                "Angular",
+                "Bootstrap",
+                "JavaFX"
+            ],
+        },
+        {
+            name: "Back-End Tools",
+            list: [
+                "Spring",
+                "Flask"
+            ]
+        },
+        {
+            name: "Testing Tools",
+            list: [
+                "Junit",
+                "Jasmine",
+                "Mockito"
+            ]
+        }
+    ]
 };
