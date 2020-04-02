@@ -29,6 +29,7 @@ class AboutMe extends Component {
                                         </div>
                                     ))}
                                     <div className="row d-block">
+                                        <h3 className="h3">{skills.title}</h3>
                                         <ul className="list-group">
                                             {skills.content.map(skill => (
                                                 <li className="list-group-item">
