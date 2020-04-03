@@ -3,11 +3,11 @@ export const projects = {
     content: [
         {
             name: "Rival Search",
-            preview: "https://picsum.photos/480/270",
+            preview: "https://picsum.photos/480/270"
         },
         {
             name: "Digital Library",
-            preview: "https://picsum.photos/480/270",
+            preview: "https://picsum.photos/480/270"
         },
         {
             name: "Meatbol Interpreter",
@@ -29,6 +29,10 @@ export const projects = {
                 "project. I collaborated with four other students to create this project. I led the design and " +
                 "implementation of the front end."
             )
+        },
+        {
+            name: "Rival Search",
+            preview: "https://picsum.photos/480/270"
         }
     ]
 };
