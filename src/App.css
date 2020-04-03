@@ -1,5 +1,9 @@
 .page {
-    min-height: 100vh;
+    min-height: 90vh;
+}
+
+.navbar-height {
+    min-height: 10vh;
 }
 
 .page-half {

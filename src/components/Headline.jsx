@@ -5,7 +5,7 @@ class Headline extends Component {
 
     render() {
         return (
-            <div className="container-fluid page center">
+            <div className="container-fluid page center my-auto">
                 <div className="row">
                     <div className="col-12">
                         <h1 className="display-4 text-white text-left">{headline}</h1>
