@@ -5,6 +5,9 @@ class Navbar extends Component {
     render() {
         return (
             <nav className="container-fluid navbar navbar-expand-md navbar-dark p-3 sticky-top navbar-height">
+                <button className="navbar-toggler" type="button">
+                    <span class="navbar-toggler-icon"/>
+                </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="container-fluid navbar-nav d-flex">
                         <li className="nav-item mx-auto">
