@@ -1,5 +1,4 @@
 import React from 'react';
-import AboutMe from "./components/AboutMe";
 import Testimonials from "./components/Testimonials";
 import Projects from "./components/Projects";
 import ContactMe from "./components/ContactMe";
@@ -12,9 +11,8 @@ function App() {
     <div className="bg">
       <Navbar/>
       <Headline/>
-      <AboutMe/>
-      <Testimonials/>
       <Projects/>
+      <Testimonials/>
       <ContactMe/>
     </div>
   );

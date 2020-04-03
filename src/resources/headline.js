@@ -1,1 +1,1 @@
-export const headline = "Hello, I'm Mason Pohler. I'm a Computer Science graduate.";
+export const headline = "Hello, I'm Mason Pohler. I like to build software.";

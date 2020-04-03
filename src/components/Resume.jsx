@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-import {aboutMeTitle, background, skills} from "../resources/aboutMe";
+import {aboutMeTitle, background, skills} from "../resources/resume";
 
-class AboutMe extends Component {
+class Resume extends Component {
 
     render() {
         return (
@@ -47,4 +47,4 @@ class AboutMe extends Component {
     }
 }
 
-export default AboutMe;
+export default Resume;
