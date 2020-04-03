@@ -29,6 +29,10 @@
     justify-content: center;
 }
 
+.img-grid {
+    max-width: 80em;
+}
+
 .content {
     max-width: 55em;
 }
