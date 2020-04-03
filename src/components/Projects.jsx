@@ -7,10 +7,15 @@ class Projects extends Component {
     render() {
         return (
             <div className="container-fluid page bg-white center">
-                <div className="row content m-2">
+                <div className="row content mt-5 mb-5">
                     <h1 className="h1">{projects.title}</h1>
                 </div>
-                <ProjectGrid/>
+                <div className="row mb-5 mt-5">
+                    <p>Here is some of my recent work.</p>
+                </div>
+                <div className="row mb-5 mt-5">
+                    <ProjectGrid/>
+                </div>
             </div>
         )
     }
