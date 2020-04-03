@@ -5,9 +5,12 @@ class Testimonials extends Component {
 
     render() {
         return (
-            <div className="container-fluid page bg-blue center text-white">
+            <div className="container-fluid bg-blue center text-white">
+                <div className="row mt-2">
+                    <h1 className="h1">{testimonials.title}</h1>
+                </div>
                 <div className="container center">
-                    {testimonials.map(testimonial => (
+                    {testimonials.content.map(testimonial => (
                         <div className="row my-2 content">
                             <div className="col">
                                 <blockquote className="blockquote">
