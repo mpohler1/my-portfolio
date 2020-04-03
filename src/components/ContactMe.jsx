@@ -4,7 +4,8 @@ class ContactMe extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container-fluid page-half bg-blue-dark center">
+
             </div>
         )
     }

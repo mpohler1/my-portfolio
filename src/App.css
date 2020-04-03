@@ -2,6 +2,10 @@
     min-height: 100vh;
 }
 
+.page-half {
+    min-height: 50vh;
+}
+
 .bg {
     background-image: url("./resources/backgroundImage.jpg");
     background-position: center;
@@ -11,6 +15,10 @@
 }
 
 .bg-blue {
+    background-color: #0b2a3e;
+}
+
+.bg-blue-dark {
     background-color: #0a1823;
 }
 

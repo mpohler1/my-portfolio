@@ -4,7 +4,8 @@ class Projects extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container-fluid bg-white page center">
+
             </div>
         )
     }
