@@ -36,7 +36,7 @@ class Navbar extends Component {
                     this.baseBackgroundColor[2] + ", " +
                     this.props.backgroundOpacity + ")"
                 )}>
-                <button className="navbar-toggler ml-3" type="button">
+                <button className="navbar-toggler ml-2" type="button">
                     <span className="navbar-toggler-icon"/>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
