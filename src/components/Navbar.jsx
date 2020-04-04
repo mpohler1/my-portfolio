@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import {setBackgroundOpacity} from "../actions/actions";
+import {Link, animateScroll} from "react-scroll";
 
 class Navbar extends Component {
     baseBackgroundColor = [10, 24, 35];
@@ -40,16 +41,44 @@ class Navbar extends Component {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="container-fluid navbar-nav d-flex">
                         <li className="nav-item mx-auto btn">
-                            <h5 className="h5 nav-link">Home</h5>
+                            <Link activeClass="active"
+                                  to="home"
+                                  spy={true}
+                                  smooth={true}
+                                  offset={-(window.innerHeight*.08)}
+                            >
+                                <h5 className="h5 nav-link">Home</h5>
+                            </Link>
                         </li>
                         <li className="nav-item mx-auto btn">
-                            <h5 className="h5 nav-link">My Projects</h5>
+                            <Link activeClass="active"
+                                  to="projects"
+                                  spy={true}
+                                  smooth={true}
+                                  offset={-(window.innerHeight*.08)}
+                            >
+                                <h5 className="h5 nav-link">My Projects</h5>
+                            </Link>
                         </li>
                         <li className="nav-item mx-auto btn">
-                            <h5 className="h5 nav-link">Testimonials</h5>
+                            <Link activeClass="active"
+                                  to="testimonials"
+                                  spy={true}
+                                  smooth={true}
+                                  offset={-(window.innerHeight*.08)}
+                            >
+                                <h5 className="h5 nav-link">Testimonials</h5>
+                            </Link>
                         </li>
                         <li className="nav-item mx-auto btn">
-                            <h5 className="h5 nav-link">Contact Me</h5>
+                            <Link activeClass="active"
+                                  to="contactMe"
+                                  spy={true}
+                                  smooth={true}
+                                  offset={-(window.innerHeight*.08)}
+                            >
+                                <h5 className="h5 nav-link">Contact Me</h5>
+                            </Link>
                         </li>
                         <li className="nav-item mx-auto btn">
                             <h5 className="h5 nav-link">My Resume</h5>

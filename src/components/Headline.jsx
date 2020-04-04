@@ -6,7 +6,7 @@ class Headline extends Component {
 
     render() {
         return (
-            <div className="container-fluid page center my-auto"
+            <div className="container-fluid page center my-auto" id="home"
                  ref={div => div && div.setAttribute(
                      "style", "opacity: " + this.props.opacity
                  )}>
