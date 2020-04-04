@@ -8,7 +8,7 @@ class Navbar extends Component {
     baseBackgroundColor = [10, 24, 35];
 
     handleScroll() {
-        const bottomOfHeadline = window.innerHeight - (0.08 * window.innerHeight);
+        const bottomOfHeadline = window.innerHeight - convertRemToPixels(5);
         const opacity = (window.scrollY / bottomOfHeadline).toFixed(2);
         if (opacity > 100) {
             this.props.setBackgroundOpacity(1);
