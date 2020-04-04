@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import {setBackgroundOpacity} from "../actions/actions";
-import {Link, animateScroll} from "react-scroll";
+import {Link} from "react-scroll";
 
 class Navbar extends Component {
     baseBackgroundColor = [10, 24, 35];
