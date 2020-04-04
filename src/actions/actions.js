@@ -1,10 +1,10 @@
-import {SET_NAVBAR_BACKGROUND_VISIBILITY} from "./actionTypes";
+import {SET_BACKGROUND_OPACITY} from "./actionTypes";
 
-export const setBackgroundVisibility = backgroundIsVisible => (
+export const setBackgroundOpacity = backgroundOpacity => (
     {
-        type: SET_NAVBAR_BACKGROUND_VISIBILITY,
+        type: SET_BACKGROUND_OPACITY,
         payload: {
-            backgroundIsVisible: backgroundIsVisible
+            backgroundOpacity: backgroundOpacity
         }
     }
 );

@@ -1,13 +1,9 @@
 .page {
-    min-height: 90vh;
+    min-height: 92vh;
 }
 
 .navbar-height {
-    min-height: 10vh;
-}
-
-.page-half {
-    min-height: 50vh;
+    height: 8vh;
 }
 
 .bg {

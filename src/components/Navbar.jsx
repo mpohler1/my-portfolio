@@ -1,15 +1,17 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
-import {setBackgroundVisibility} from "../actions/actions";
+import {setBackgroundOpacity} from "../actions/actions";
 
 class Navbar extends Component {
+    baseBackgroundColor = [10, 24, 35];
 
     handleScroll() {
-        const navbarHeight = 0.10 * window.innerHeight;
-        if (!this.props.backgroundIsVisible && window.scrollY > window.innerHeight - navbarHeight) {
-            this.props.setBackgroundVisibility(true);
-        } else if (this.props.backgroundIsVisible && window.scrollY <= window.innerHeight - navbarHeight) {
-            this.props.setBackgroundVisibility(false);
+        const bottomOfHeadline = window.innerHeight - (0.08 * window.innerHeight);
+        const opacity = (window.scrollY / bottomOfHeadline).toFixed(2);
+        if (opacity > 100) {
+            this.props.setBackgroundOpacity(1);
+        } else {
+            this.props.setBackgroundOpacity(opacity);
         }
     }
 
@@ -21,10 +23,17 @@ class Navbar extends Component {
         window.removeEventListener("scroll", () => this.handleScroll());
     }
 
+
     render() {
         return (
-            <nav className={"container-fluid navbar navbar-expand-md navbar-dark p-3 sticky-top navbar-height" +
-            (this.props.backgroundIsVisible === true ? " bg-blue-dark":"")}>
+            <nav className="container-fluid navbar navbar-expand-md navbar-dark p-3 sticky-top navbar-height"
+                ref={navbar => navbar && navbar.setAttribute(
+                    "style", "background-color: rgba(" +
+                    this.baseBackgroundColor[0] + ", " +
+                    this.baseBackgroundColor[1] + ", " +
+                    this.baseBackgroundColor[2] + ", " +
+                    this.props.backgroundOpacity + ")"
+                )}>
                 <button className="navbar-toggler" type="button">
                     <span className="navbar-toggler-icon"/>
                 </button>
@@ -53,10 +62,9 @@ class Navbar extends Component {
 }
 
 const mapStateToProps = state => {
-    console.log(state);
     return {
-        backgroundIsVisible: state.navbar.backgroundIsVisible
+        backgroundOpacity: state.navbar.backgroundOpacity
     };
 };
 
-export default connect(mapStateToProps, {setBackgroundVisibility})(Navbar);
+export default connect(mapStateToProps, {setBackgroundOpacity})(Navbar);

@@ -1,11 +1,11 @@
-import {SET_NAVBAR_BACKGROUND_VISIBILITY} from "../actions/actionTypes";
+import {SET_BACKGROUND_OPACITY} from "../actions/actionTypes";
 
-function navBarReducer(state = {backgroundIsVisible: false}, action) {
+function navBarReducer(state = {backgroundOpacity: 0}, action) {
     switch (action.type) {
-        case SET_NAVBAR_BACKGROUND_VISIBILITY:
+        case SET_BACKGROUND_OPACITY:
             return Object.assign({}, state, (
                 {
-                    backgroundIsVisible: action.payload.backgroundIsVisible
+                    backgroundOpacity: action.payload.backgroundOpacity
                 }
             ));
         default:
