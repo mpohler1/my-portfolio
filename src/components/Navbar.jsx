@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {setBackgroundOpacity} from "../actions/actions";
 import {Link} from "react-scroll";
+import {convertRemToPixels} from "../service/rem";
 
 class Navbar extends Component {
     baseBackgroundColor = [10, 24, 35];
@@ -27,7 +28,7 @@ class Navbar extends Component {
 
     render() {
         return (
-            <nav className="container-fluid navbar navbar-expand-md navbar-dark p-3 sticky-top navbar-height"
+            <nav className="container-fluid navbar navbar-expand-md navbar-dark sticky-top navbar-height"
                 ref={navbar => navbar && navbar.setAttribute(
                     "style", "background-color: rgba(" +
                     this.baseBackgroundColor[0] + ", " +
@@ -35,7 +36,7 @@ class Navbar extends Component {
                     this.baseBackgroundColor[2] + ", " +
                     this.props.backgroundOpacity + ")"
                 )}>
-                <button className="navbar-toggler" type="button">
+                <button className="navbar-toggler ml-3" type="button">
                     <span className="navbar-toggler-icon"/>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
@@ -45,7 +46,7 @@ class Navbar extends Component {
                                   to="home"
                                   spy={true}
                                   smooth={true}
-                                  offset={-(window.innerHeight*.08)}>
+                                  offset={-convertRemToPixels(5)}>
                                 <h5 className="h5 nav-link font-weight-normal">Home</h5>
                             </Link>
                         </li>
@@ -54,7 +55,7 @@ class Navbar extends Component {
                                   to="projects"
                                   spy={true}
                                   smooth={true}
-                                  offset={-(window.innerHeight*.08)}>
+                                  offset={-convertRemToPixels(5)}>
                                 <h5 className="h5 nav-link font-weight-normal">My Projects</h5>
                             </Link>
                         </li>
@@ -63,7 +64,7 @@ class Navbar extends Component {
                                   to="testimonials"
                                   spy={true}
                                   smooth={true}
-                                  offset={-(window.innerHeight*.08)}>
+                                  offset={-convertRemToPixels(5)}>
                                 <h5 className="h5 nav-link font-weight-normal">Testimonials</h5>
                             </Link>
                         </li>
@@ -72,7 +73,7 @@ class Navbar extends Component {
                                   to="contactMe"
                                   spy={true}
                                   smooth={true}
-                                  offset={-(window.innerHeight*.08)}>
+                                  offset={-convertRemToPixels(5)}>
                                 <h5 className="h5 nav-link font-weight-normal">Contact Me</h5>
                             </Link>
                         </li>

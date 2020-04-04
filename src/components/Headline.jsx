@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {headline} from "../resources/headline";
 import {connect} from "react-redux";
 import {Link} from "react-scroll";
+import {convertRemToPixels} from "../service/rem";
 
 class Headline extends Component {
 
@@ -24,7 +25,7 @@ class Headline extends Component {
                               to="projects"
                               spy={true}
                               smooth={true}
-                              offset={-(window.innerHeight*.08)}>
+                              offset={-convertRemToPixels(5)}>
                             <button className={
                                 this.props.opacity <= 0 ? "btn-outline-light btn-lg" : "btn btn-outline-light btn-lg"
                             }
