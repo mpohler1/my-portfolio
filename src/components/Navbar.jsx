@@ -45,8 +45,7 @@ class Navbar extends Component {
                                   to="home"
                                   spy={true}
                                   smooth={true}
-                                  offset={-(window.innerHeight*.08)}
-                            >
+                                  offset={-(window.innerHeight*.08)}>
                                 <h5 className="h5 nav-link">Home</h5>
                             </Link>
                         </li>
@@ -55,8 +54,7 @@ class Navbar extends Component {
                                   to="projects"
                                   spy={true}
                                   smooth={true}
-                                  offset={-(window.innerHeight*.08)}
-                            >
+                                  offset={-(window.innerHeight*.08)}>
                                 <h5 className="h5 nav-link">My Projects</h5>
                             </Link>
                         </li>
@@ -65,8 +63,7 @@ class Navbar extends Component {
                                   to="testimonials"
                                   spy={true}
                                   smooth={true}
-                                  offset={-(window.innerHeight*.08)}
-                            >
+                                  offset={-(window.innerHeight*.08)}>
                                 <h5 className="h5 nav-link">Testimonials</h5>
                             </Link>
                         </li>
@@ -75,8 +72,7 @@ class Navbar extends Component {
                                   to="contactMe"
                                   spy={true}
                                   smooth={true}
-                                  offset={-(window.innerHeight*.08)}
-                            >
+                                  offset={-(window.innerHeight*.08)}>
                                 <h5 className="h5 nav-link">Contact Me</h5>
                             </Link>
                         </li>

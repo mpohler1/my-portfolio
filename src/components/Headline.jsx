@@ -24,10 +24,8 @@ class Headline extends Component {
                               to="projects"
                               spy={true}
                               smooth={true}
-                              offset={-(window.innerHeight*.08)}
-                        >
-                            <button className="btn btn-outline-light btn-lg"
-                            >
+                              offset={-(window.innerHeight*.08)}>
+                            <button className="btn btn-outline-light btn-lg">
                                 See My Work
                             </button>
                         </Link>
