@@ -25,7 +25,10 @@ class Headline extends Component {
                               spy={true}
                               smooth={true}
                               offset={-(window.innerHeight*.08)}>
-                            <button className="btn btn-outline-light btn-lg">
+                            <button className={
+                                this.props.opacity <= 0 ? "btn-outline-light btn-lg" : "btn btn-outline-light btn-lg"
+                            }
+                                    disabled={this.props.opacity <= 0}>
                                 See My Work
                             </button>
                         </Link>

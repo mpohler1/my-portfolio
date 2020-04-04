@@ -46,7 +46,7 @@ class Navbar extends Component {
                                   spy={true}
                                   smooth={true}
                                   offset={-(window.innerHeight*.08)}>
-                                <h5 className="h5 nav-link">Home</h5>
+                                <h5 className="h5 nav-link font-weight-normal">Home</h5>
                             </Link>
                         </li>
                         <li className="nav-item mx-auto btn">
@@ -55,7 +55,7 @@ class Navbar extends Component {
                                   spy={true}
                                   smooth={true}
                                   offset={-(window.innerHeight*.08)}>
-                                <h5 className="h5 nav-link">My Projects</h5>
+                                <h5 className="h5 nav-link font-weight-normal">My Projects</h5>
                             </Link>
                         </li>
                         <li className="nav-item mx-auto btn">
@@ -64,7 +64,7 @@ class Navbar extends Component {
                                   spy={true}
                                   smooth={true}
                                   offset={-(window.innerHeight*.08)}>
-                                <h5 className="h5 nav-link">Testimonials</h5>
+                                <h5 className="h5 nav-link font-weight-normal">Testimonials</h5>
                             </Link>
                         </li>
                         <li className="nav-item mx-auto btn">
@@ -73,11 +73,11 @@ class Navbar extends Component {
                                   spy={true}
                                   smooth={true}
                                   offset={-(window.innerHeight*.08)}>
-                                <h5 className="h5 nav-link">Contact Me</h5>
+                                <h5 className="h5 nav-link font-weight-normal">Contact Me</h5>
                             </Link>
                         </li>
                         <li className="nav-item mx-auto btn">
-                            <h5 className="h5 nav-link">My Resume</h5>
+                            <h5 className="h5 nav-link font-weight-normal">My Resume</h5>
                         </li>
                     </ul>
                 </div>
