@@ -29,10 +29,11 @@
     justify-content: center;
 }
 
-.img-grid {
-    max-width: 70em;
-}
-
 .content {
     max-width: 55em;
+}
+
+.project-thumbnail {
+    max-width: 480px;
+    max-height: 270px;
 }

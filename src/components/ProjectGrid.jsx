@@ -22,12 +22,12 @@ class ProjectGrid extends Component{
 
     render() {
         return (
-            <div className="container">
-                <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 img-grid">
+            <div className="container-fluid">
+                <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
                     {this.props.projects.map(project => (
                         <div className="col p-0 center">
                             <div className="mb-2 mx-2 my-sm-1 mx-sm-1 center">
-                                <img className="card-img-top rounded"
+                                <img className="card-img-top rounded project-thumbnail"
                                      src={project.previewURL}
                                      alt={project.name}/>
                             </div>

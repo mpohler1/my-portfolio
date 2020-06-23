@@ -11,11 +11,9 @@ function App() {
         <div className="bg">
             <Navbar/>
             <Headline/>
-            <div>
             <Projects/>
             <Testimonials/>
             <ContactMe/>
-            </div>
         </div>
     );
 }
