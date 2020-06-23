@@ -5,22 +5,20 @@ class Testimonials extends Component {
 
     render() {
         return (
-            <div className="container-fluid page-half bg-blue center text-white" id="testimonials">
-                <div className="row mt-2">
-                    <h1 className="h1 font-weight-light">{testimonials.title}</h1>
+            <div className="container-fluid page bg-blue center text-white" id="testimonials">
+                <div className="row my-auto">
+                    <h4 className="display-4 font-weight-light">{testimonials.title}</h4>
                 </div>
-                <div className="container center">
-                    {testimonials.content.map(testimonial => (
-                        <div className="row my-2 content">
-                            <div className="col">
-                                <blockquote className="blockquote">
-                                    <p className="m-0 font-weight-light">{testimonial.quote}</p>
-                                    <footer className="blockquote-footer">{testimonial.name}, {testimonial.title}</footer>
-                                </blockquote>
-                            </div>
+                {testimonials.content.map(testimonial => (
+                    <div className="row content mb-auto">
+                        <div className="col">
+                            <blockquote className="blockquote">
+                                <p className="m-0 font-weight-light">{testimonial.quote}</p>
+                                <footer className="blockquote-footer">{testimonial.name}, {testimonial.title}</footer>
+                            </blockquote>
                         </div>
-                    ))}
-                </div>
+                    </div>
+                ))}
             </div>
         );
     }

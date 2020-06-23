@@ -8,13 +8,13 @@ class Projects extends Component {
     render() {
         return (
             <div className="container-fluid page bg-white center" id="projects">
-                <div className="row my-4">
-                    <h1 className="h1 font-weight-light">Projects</h1>
+                <div className="row mt-auto mb-lg-3">
+                    <h4 className="display-4 font-weight-light">My Projects</h4>
                 </div>
-                <div className="row my-4">
+                <div className="row mb-auto">
                     <p>Here is some of my recent work.</p>
                 </div>
-                <div className="row my-4 w-100 center">
+                <div className="row mb-auto w-100 center">
                     <ProjectFilter/>
                     <ProjectGrid/>
                     <ProjectModal/>
