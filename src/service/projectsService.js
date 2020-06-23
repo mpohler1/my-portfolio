@@ -1,4 +1,4 @@
-const apiURL = "http://localhost:1000";
+const apiURL = "http://192.168.1.69:1000";
 
 export function fetchProjects() {
     const endpoint = apiURL + "/projects";

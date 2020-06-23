@@ -2,7 +2,7 @@ import {
     FETCH_PROJECTS_FAILURE,
     FETCH_PROJECTS_REQUEST,
     FETCH_PROJECTS_SUCCESS, SEND_MAIL_FAILURE, SEND_MAIL_REQUEST, SEND_MAIL_SUCCESS,
-    SET_BACKGROUND_OPACITY
+    SET_BACKGROUND_OPACITY, SET_PROJECT_HOVERED
 } from "./actionTypes";
 
 export const setBackgroundOpacity = backgroundOpacity => (
@@ -58,3 +58,14 @@ export const sendMailFailure = responseMessage => (
         }
     }
 );
+
+export const setProjectHovered = (project, hovered) => (
+    {
+        type: SET_PROJECT_HOVERED,
+        payload: {
+            project: project,
+            hovered: hovered
+        }
+    }
+);
+

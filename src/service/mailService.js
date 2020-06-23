@@ -1,4 +1,4 @@
-const apiURL = "http://localhost:9000";
+const apiURL = "http://192.168.1.69:9000";
 
 export function sendMail(from, subject, body) {
     const endpoint = apiURL + "/mail/send";

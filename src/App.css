@@ -34,6 +34,15 @@
 }
 
 .project-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
     max-width: 480px;
     max-height: 270px;
+}
+
+.project-background {
+    background-color: #091522;
+    width: 480px;
+    height: 270px;
 }
