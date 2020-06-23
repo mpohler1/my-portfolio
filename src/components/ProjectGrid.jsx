@@ -34,14 +34,14 @@ class ProjectGrid extends Component{
 
     render() {
         return (
-            <div className="container-fluid">
-                <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
+            <div className="container-fluid p-0 m-0">
+                <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 p-0 m-0">
                     {this.props.projects.map(project => (
-                        <div className="col p-0 center">
-                            <div className="mb-2 mx-2 my-sm-1 mx-sm-1 center position-relative"
+                        <div className="col p-2">
+                            <div className="project-box rounded"
                                  onMouseEnter={() => this.props.setProjectHovered(project, true)}
                                  onMouseLeave={() => this.props.setProjectHovered(project, false)}>
-                                <div className="text-center project-background text-white rounded center p-3">
+                                <div className="p-2 center text-white">
                                     <h4>
                                         {project.name}
                                     </h4>
@@ -61,9 +61,11 @@ class ProjectGrid extends Component{
                                 </div>
                                 {
                                     !project.hovered &&
-                                    <img className="card-img-top rounded project-thumbnail"
-                                         src={project.previewURL}
-                                         alt={project.name}/>
+                                        <div>
+                                            <img className="card-img rounded"
+                                                 src={project.previewURL}
+                                                 alt={project.name}/>
+                                        </div>
                                 }
                             </div>
                         </div>

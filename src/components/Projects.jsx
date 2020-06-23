@@ -7,13 +7,13 @@ class Projects extends Component {
     render() {
         return (
             <div className="container-fluid page bg-white center" id="projects">
-                <div className="row content mt-5 mb-5">
+                <div className="row my-4">
                     <h1 className="h1 font-weight-light">Projects</h1>
                 </div>
-                <div className="row mb-5 mt-5">
+                <div className="row my-4">
                     <p>Here is some of my recent work.</p>
                 </div>
-                <div className="row mb-5 mt-5">
+                <div className="row my-4 w-100">
                     <ProjectGrid/>
                     <ProjectModal/>
                 </div>
