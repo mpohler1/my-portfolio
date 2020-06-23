@@ -10,7 +10,7 @@ class ProjectFilter extends Component {
 
     render() {
         return (
-            <ul className="nav nav-tabs">
+            <ul className="nav nav-tabs mb-1">
                 <li className="nav-item">
                     <button className={this.props.filterMode === ALL_PROJECTS ? classListWithActive : classListWithoutActive}
                             onClick={() => this.props.setFilterMode(ALL_PROJECTS)}>
