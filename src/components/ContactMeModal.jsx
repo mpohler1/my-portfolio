@@ -1,6 +1,7 @@
 import React, {Component} from "react";
-import {sendMailFailure, sendMailRequest, sendMailSuccess, setContactMeModalVisible} from "../actions/actions";
+import {setContactMeModalVisible} from "../actions/actions";
 import {connect} from "react-redux";
+import ContactMeForm from "./ContactMeForm";
 
 class ContactMeModal extends Component {
 
@@ -24,10 +25,7 @@ class ContactMeModal extends Component {
                                     </button>
                                 </div>
                                 <div className="modal-body">
-
-                                </div>
-                                <div className="modal-footer">
-
+                                    <ContactMeForm/>
                                 </div>
                             </div>
                         </div>
@@ -41,16 +39,10 @@ class ContactMeModal extends Component {
 const mapStateToProps = state => {
     return {
         modalVisible: state.contactMe.modalVisible,
-        from: state.contactMe.from,
-        subject: state.contactMe.from,
-        body: state.contactMe.body,
         response: state.mail.response
     };
 };
 
 export default connect(mapStateToProps, {
-    sendMailRequest,
-    sendMailSuccess,
-    sendMailFailure,
     setContactMeModalVisible
 })(ContactMeModal);
