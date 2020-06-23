@@ -10,7 +10,7 @@ class ProjectModal extends Component {
                 {
                     this.props.modalVisible &&
                     <React.Fragment>
-                        <div className="modal d-block" role="dialog">
+                        <div className="modal d-block text-dark" role="dialog">
                             <div className="modal-shadow"
                                  onClick={() => this.props.setModalVisible(false)}/>
                             <div className="modal-dialog modal-dialog-centered">

@@ -7,7 +7,7 @@ class Projects extends Component {
 
     render() {
         return (
-            <div className="container-fluid page bg-white center" id="projects">
+            <div className="container-fluid page bg-white text-dark center" id="projects">
                 <div className="row my-auto">
                     <h4 className="display-4 font-weight-light">My Projects</h4>
                 </div>
