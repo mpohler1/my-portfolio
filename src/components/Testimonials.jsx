@@ -14,7 +14,7 @@ class Testimonials extends Component {
                         <div className="row my-2 content">
                             <div className="col">
                                 <blockquote className="blockquote">
-                                    <p className="m-0">{testimonial.quote}</p>
+                                    <p className="m-0 font-weight-light">{testimonial.quote}</p>
                                     <footer className="blockquote-footer">{testimonial.name}, {testimonial.title}</footer>
                                 </blockquote>
                             </div>
