@@ -8,11 +8,8 @@ class Projects extends Component {
     render() {
         return (
             <div className="container-fluid page bg-white center" id="projects">
-                <div className="row mt-auto mb-3">
+                <div className="row my-auto">
                     <h4 className="display-4 font-weight-light">My Projects</h4>
-                </div>
-                <div className="row mb-auto">
-                    <p>Here is some of my recent work.</p>
                 </div>
                 <div className="row mb-auto w-100 center">
                     <ProjectFilter/>
