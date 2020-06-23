@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import ProjectGrid from "./ProjectGrid";
+import ProjectModal from "./ProjectModal";
 
 class Projects extends Component {
 
@@ -14,6 +15,7 @@ class Projects extends Component {
                 </div>
                 <div className="row mb-5 mt-5">
                     <ProjectGrid/>
+                    <ProjectModal/>
                 </div>
             </div>
         )

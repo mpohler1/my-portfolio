@@ -1,6 +1,11 @@
-import {FETCH_PROJECTS_SUCCESS, SET_PROJECT_HOVERED} from "../actions/actionTypes";
+import {
+    FETCH_PROJECTS_SUCCESS,
+    SET_MODAL_VISIBLE,
+    SET_PROJECT_HOVERED,
+    SET_SELECTED_PROJECT
+} from "../actions/actionTypes";
 
-function projectsReducer(state = {projects: []}, action) {
+function projectsReducer(state = {projects: [], selectedProject: {}, modalVisible: false}, action) {
     switch (action.type) {
         case FETCH_PROJECTS_SUCCESS:
             return Object.assign({}, state, {
@@ -18,6 +23,16 @@ function projectsReducer(state = {projects: []}, action) {
                     }
                     return project;
                 })
+            });
+
+        case SET_SELECTED_PROJECT:
+            return Object.assign({}, state, {
+                selectedProject: action.payload.selectedProject
+            });
+
+        case SET_MODAL_VISIBLE:
+            return Object.assign({}, state, {
+                modalVisible: action.payload.modalVisible
             });
 
         default:

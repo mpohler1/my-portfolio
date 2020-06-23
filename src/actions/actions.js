@@ -2,7 +2,7 @@ import {
     FETCH_PROJECTS_FAILURE,
     FETCH_PROJECTS_REQUEST,
     FETCH_PROJECTS_SUCCESS, SEND_MAIL_FAILURE, SEND_MAIL_REQUEST, SEND_MAIL_SUCCESS,
-    SET_BACKGROUND_OPACITY, SET_PROJECT_HOVERED
+    SET_BACKGROUND_OPACITY, SET_MODAL_VISIBLE, SET_PROJECT_HOVERED, SET_SELECTED_PROJECT
 } from "./actionTypes";
 
 export const setBackgroundOpacity = backgroundOpacity => (
@@ -69,3 +69,20 @@ export const setProjectHovered = (project, hovered) => (
     }
 );
 
+export const setSelectedProject = selectedProject => (
+    {
+        type: SET_SELECTED_PROJECT,
+        payload: {
+            selectedProject: selectedProject
+        }
+    }
+);
+
+export const setModalVisible = modalVisible => (
+    {
+        type: SET_MODAL_VISIBLE,
+        payload: {
+            modalVisible: modalVisible
+        }
+    }
+);

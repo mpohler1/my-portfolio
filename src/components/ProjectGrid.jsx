@@ -1,9 +1,21 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
-import {fetchProjectsFailure, fetchProjectsRequest, fetchProjectsSuccess, setProjectHovered} from "../actions/actions";
+import {
+    fetchProjectsRequest,
+    fetchProjectsSuccess,
+    fetchProjectsFailure,
+    setProjectHovered,
+    setSelectedProject,
+    setModalVisible
+} from "../actions/actions";
 import {fetchProjects} from "../service/projectsService";
 
 class ProjectGrid extends Component{
+
+    moreInfoButtonClick(project) {
+        this.props.setSelectedProject(project);
+        this.props.setModalVisible(true);
+    }
 
     determineProjectList() {
         this.props.fetchProjectsRequest();
@@ -37,11 +49,12 @@ class ProjectGrid extends Component{
                                         {project.description}
                                     </p>
                                     <div>
-                                        <button className="btn btn-primary mr-2"
+                                        <button className="btn btn-primary mr-3"
                                                 onClick={() => window.open(project.liveURL)}>
                                             Try Demo
                                         </button>
-                                        <button className="btn btn-info">
+                                        <button className="btn btn-info"
+                                                onClick={() => this.moreInfoButtonClick(project)}>
                                             More Info
                                         </button>
                                     </div>
@@ -51,7 +64,6 @@ class ProjectGrid extends Component{
                                     <img className="card-img-top rounded project-thumbnail"
                                          src={project.previewURL}
                                          alt={project.name}/>
-
                                 }
                             </div>
                         </div>
@@ -72,5 +84,7 @@ export default connect(mapStateToProps, {
     fetchProjectsRequest,
     fetchProjectsSuccess,
     fetchProjectsFailure,
-    setProjectHovered
+    setProjectHovered,
+    setSelectedProject,
+    setModalVisible
 })(ProjectGrid);
