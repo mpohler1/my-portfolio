@@ -9,6 +9,7 @@ import {
     setModalVisible
 } from "../actions/actions";
 import {fetchProjects} from "../service/projectsService";
+import {ALL_PROJECTS, LARGE_PROJECTS, SMALL_PROJECTS} from "../resources/filterModes";
 
 class ProjectGrid extends Component{
 
@@ -78,7 +79,19 @@ class ProjectGrid extends Component{
 
 const mapStateToProps = state => {
     return {
-        projects: state.projects.projects
+        projects: state.projects.projects.filter(project => {
+            switch(state.projects.filterMode) {
+                case LARGE_PROJECTS:
+                    return project.large;
+
+                case SMALL_PROJECTS:
+                    return !project.large;
+
+                case ALL_PROJECTS:
+                default:
+                    return true;
+            }
+        })
     }
 };
 

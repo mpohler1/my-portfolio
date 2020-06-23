@@ -2,7 +2,7 @@ import {
     FETCH_PROJECTS_FAILURE,
     FETCH_PROJECTS_REQUEST,
     FETCH_PROJECTS_SUCCESS, SEND_MAIL_FAILURE, SEND_MAIL_REQUEST, SEND_MAIL_SUCCESS,
-    SET_BACKGROUND_OPACITY, SET_MODAL_VISIBLE, SET_PROJECT_HOVERED, SET_SELECTED_PROJECT
+    SET_BACKGROUND_OPACITY, SET_FILTER_MODE, SET_MODAL_VISIBLE, SET_PROJECT_HOVERED, SET_SELECTED_PROJECT
 } from "./actionTypes";
 
 export const setBackgroundOpacity = backgroundOpacity => (
@@ -83,6 +83,15 @@ export const setModalVisible = modalVisible => (
         type: SET_MODAL_VISIBLE,
         payload: {
             modalVisible: modalVisible
+        }
+    }
+);
+
+export const setFilterMode = filterMode => (
+    {
+        type: SET_FILTER_MODE,
+        payload: {
+            filterMode: filterMode
         }
     }
 );

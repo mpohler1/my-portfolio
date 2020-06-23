@@ -1,11 +1,17 @@
 import {
-    FETCH_PROJECTS_SUCCESS,
+    FETCH_PROJECTS_SUCCESS, SET_FILTER_MODE,
     SET_MODAL_VISIBLE,
     SET_PROJECT_HOVERED,
     SET_SELECTED_PROJECT
 } from "../actions/actionTypes";
+import {ALL_PROJECTS} from "../resources/filterModes";
 
-function projectsReducer(state = {projects: [], selectedProject: {}, modalVisible: false}, action) {
+function projectsReducer(state = {
+    projects: [],
+    selectedProject: {},
+    modalVisible: false,
+    filterMode: ALL_PROJECTS
+}, action) {
     switch (action.type) {
         case FETCH_PROJECTS_SUCCESS:
             return Object.assign({}, state, {
@@ -33,6 +39,11 @@ function projectsReducer(state = {projects: [], selectedProject: {}, modalVisibl
         case SET_MODAL_VISIBLE:
             return Object.assign({}, state, {
                 modalVisible: action.payload.modalVisible
+            });
+
+        case SET_FILTER_MODE:
+            return Object.assign({}, state, {
+                filterMode: action.payload.filterMode
             });
 
         default:

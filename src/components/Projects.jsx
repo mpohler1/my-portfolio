@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import ProjectGrid from "./ProjectGrid";
 import ProjectModal from "./ProjectModal";
+import ProjectFilter from "./ProjectFilter";
 
 class Projects extends Component {
 
@@ -13,7 +14,8 @@ class Projects extends Component {
                 <div className="row my-4">
                     <p>Here is some of my recent work.</p>
                 </div>
-                <div className="row my-4 w-100">
+                <div className="row my-4 w-100 center">
+                    <ProjectFilter/>
                     <ProjectGrid/>
                     <ProjectModal/>
                 </div>
