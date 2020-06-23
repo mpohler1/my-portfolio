@@ -1,5 +1,8 @@
 import React, {Component} from "react";
 import Footer from "./Footer";
+import ContactMeModal from "./ContactMeModal";
+import {setContactMeModalVisible} from "../actions/actions";
+import {connect} from "react-redux";
 
 class ContactMe extends Component {
 
@@ -12,9 +15,11 @@ class ContactMe extends Component {
                     </h1>
                 </div>
                 <div className="row mb-auto">
-                    <button className="btn btn-lg btn-primary">
+                    <button className="btn btn-lg btn-primary"
+                            onClick={() => this.props.setContactMeModalVisible(true)}>
                         Lets Get In Touch
                     </button>
+                    <ContactMeModal/>
                 </div>
                 <div className="row mb-auto border-top border-light w-100">
                     <Footer/>
@@ -24,4 +29,9 @@ class ContactMe extends Component {
     }
 }
 
-export default ContactMe;
+const mapStateToProps = state => {return {};};
+
+
+export default connect(mapStateToProps, {
+    setContactMeModalVisible
+})(ContactMe);

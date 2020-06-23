@@ -6,7 +6,7 @@ import {
     fetchProjectsFailure,
     setProjectHovered,
     setSelectedProject,
-    setModalVisible
+    setProjectsModalVisible
 } from "../actions/actions";
 import {fetchProjects} from "../service/projectsService";
 import {ALL_PROJECTS, LARGE_PROJECTS, SMALL_PROJECTS} from "../resources/filterModes";
@@ -15,7 +15,7 @@ class ProjectGrid extends Component{
 
     moreInfoButtonClick(project) {
         this.props.setSelectedProject(project);
-        this.props.setModalVisible(true);
+        this.props.setProjectsModalVisible(true);
     }
 
     determineProjectList() {
@@ -101,5 +101,5 @@ export default connect(mapStateToProps, {
     fetchProjectsFailure,
     setProjectHovered,
     setSelectedProject,
-    setModalVisible
+    setProjectsModalVisible
 })(ProjectGrid);

@@ -1,6 +1,6 @@
 import {
     FETCH_PROJECTS_SUCCESS, SET_FILTER_MODE,
-    SET_MODAL_VISIBLE,
+    SET_PROJECTS_MODAL_VISIBLE,
     SET_PROJECT_HOVERED,
     SET_SELECTED_PROJECT
 } from "../actions/actionTypes";
@@ -36,7 +36,7 @@ function projectsReducer(state = {
                 selectedProject: action.payload.selectedProject
             });
 
-        case SET_MODAL_VISIBLE:
+        case SET_PROJECTS_MODAL_VISIBLE:
             return Object.assign({}, state, {
                 modalVisible: action.payload.modalVisible
             });
