@@ -37,7 +37,8 @@ class ProjectGrid extends Component{
                                         {project.description}
                                     </p>
                                     <div>
-                                        <button className="btn btn-primary mr-2">
+                                        <button className="btn btn-primary mr-2"
+                                                onClick={() => window.open(project.liveURL)}>
                                             Try Demo
                                         </button>
                                         <button className="btn btn-info">
