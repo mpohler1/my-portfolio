@@ -7,7 +7,7 @@ class Testimonials extends Component {
         return (
             <div className="container-fluid page-half bg-blue center text-white" id="testimonials">
                 <div className="row mt-2">
-                    <h1 className="h1">{testimonials.title}</h1>
+                    <h1 className="h1 font-weight-light">{testimonials.title}</h1>
                 </div>
                 <div className="container center">
                     {testimonials.content.map(testimonial => (
