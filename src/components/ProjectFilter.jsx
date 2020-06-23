@@ -10,7 +10,7 @@ class ProjectFilter extends Component {
 
     render() {
         return (
-            <ul className="nav nav-tabs mb-1">
+            <ul className="nav nav-tabs text-nowrap d-inline-flex flex-nowrap mb-1">
                 <li className="nav-item">
                     <button className={this.props.filterMode === ALL_PROJECTS ? classListWithActive : classListWithoutActive}
                             onClick={() => this.props.setFilterMode(ALL_PROJECTS)}>
@@ -20,13 +20,13 @@ class ProjectFilter extends Component {
                 <li className="nav-item">
                     <button className={this.props.filterMode === LARGE_PROJECTS ? classListWithActive : classListWithoutActive}
                             onClick={() => this.props.setFilterMode(LARGE_PROJECTS)}>
-                        Large Projects
+                        Large
                     </button>
                 </li>
                 <li className="nav-item">
                     <button className={this.props.filterMode === SMALL_PROJECTS ? classListWithActive : classListWithoutActive}
                             onClick={() => this.props.setFilterMode(SMALL_PROJECTS)}>
-                        Small Projects
+                        Small
                     </button>
                 </li>
             </ul>

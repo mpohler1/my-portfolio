@@ -50,7 +50,7 @@ class Navbar extends Component {
                                 <h5 className="h5 nav-link font-weight-normal">Home</h5>
                             </Link>
                         </li>
-                        <li className="nav-item mx-auto btn">
+                        <li className="nav-item mr-auto btn">
                             <Link activeClass="active"
                                   to="projects"
                                   spy={true}
@@ -59,7 +59,7 @@ class Navbar extends Component {
                                 <h5 className="h5 nav-link font-weight-normal">My Projects</h5>
                             </Link>
                         </li>
-                        <li className="nav-item mx-auto btn">
+                        <li className="nav-item mr-auto btn">
                             <Link activeClass="active"
                                   to="testimonials"
                                   spy={true}
@@ -68,7 +68,7 @@ class Navbar extends Component {
                                 <h5 className="h5 nav-link font-weight-normal">Testimonials</h5>
                             </Link>
                         </li>
-                        <li className="nav-item mx-auto btn">
+                        <li className="nav-item mr-auto btn">
                             <Link activeClass="active"
                                   to="contactMe"
                                   spy={true}
@@ -76,9 +76,6 @@ class Navbar extends Component {
                                   offset={-convertRemToPixels(5)}>
                                 <h5 className="h5 nav-link font-weight-normal">Contact Me</h5>
                             </Link>
-                        </li>
-                        <li className="nav-item mx-auto btn">
-                            <h5 className="h5 nav-link font-weight-normal">My Resume</h5>
                         </li>
                     </ul>
                 </div>
