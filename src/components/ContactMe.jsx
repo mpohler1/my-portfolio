@@ -11,7 +11,7 @@ class ContactMe extends Component {
         return (
             <div className="container-fluid page bg-blue center text-white-50" id="contactMe">
                 <div className="row my-auto px-3">
-                    <h1 className="display-4 font-weight-light text-white">
+                    <h1 className="display-4 font-weight-light text-white text-center">
                         Like what you see?
                     </h1>
                 </div>
