@@ -5,6 +5,7 @@ import ContactMe from "./components/contact/ContactMe";
 import Navbar from "./components/navbar/Navbar";
 import Headline from "./components/headline/Headline";
 import './App.css';
+import Drawer from "./components/drawer/Drawer";
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
             <Projects/>
             <Testimonials/>
             <ContactMe/>
+            <Drawer/>
         </div>
     );
 }
