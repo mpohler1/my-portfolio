@@ -9,20 +9,20 @@ class ContactMe extends Component {
 
     render() {
         return (
-            <div className="container-fluid page bg-blue center text-white-50" id="contactMe">
-                <div className="row my-auto px-3">
+            <div className="container-fluid page bg-blue center text-white-50 px-0" id="contactMe">
+                <div className="row my-auto px-4">
                     <h1 className="display-4 font-weight-light text-white text-center">
                         Like what you see?
                     </h1>
                 </div>
-                <div className="row mb-auto px-3">
+                <div className="row mb-auto px-4">
                     <button className="btn btn-lg btn-primary"
                             onClick={() => this.props.setContactMeModalVisible(true)}>
                         Lets Get In Touch
                     </button>
                     <ContactMeModal/>
                 </div>
-                <div className="row mb-auto px-3">
+                <div className="row mb-auto px-4">
                     <p className="text-white-50">
                         Or email me directly at
                         <span className="text-white">
@@ -30,9 +30,7 @@ class ContactMe extends Component {
                         </span>
                     </p>
                 </div>
-                <div className="row w-100 px-1">
-                    <Footer/>
-                </div>
+                <Footer/>
             </div>
         )
     }

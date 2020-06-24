@@ -7,17 +7,17 @@ class Footer extends Component{
 
     render() {
         return (
-            <div className="container-fluid footer center p-0">
-                <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 w-100 footer-content my-auto">
-                    <div className="col my-2">
-                        <div className="row w-100 border-bottom border-secondary">
+            <React.Fragment>
+                <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 w-100 footer-content mb-auto px-1">
+                    <div className="col mb-auto">
+                        <div className="row w-100 border-bottom border-secondary p-0 m-0">
                             <div className="col">
                                 <h5>
                                    Contact
                                 </h5>
                             </div>
                         </div>
-                        <div className="row">
+                        <div className="row p-0 m-0">
                             <div className="col">
                                 <p>
                                     {contactInfo.name}<br/>
@@ -32,15 +32,15 @@ class Footer extends Component{
                             </div>
                         </div>
                     </div>
-                    <div className="col my-2">
-                        <div className="row w-100 border-bottom border-secondary">
+                    <div className="col mb-auto">
+                        <div className="row w-100 border-bottom border-secondary p-0 m-0">
                             <div className="col">
                                 <h5>
                                     Site Navigation
                                 </h5>
                             </div>
                         </div>
-                        <div className="row">
+                        <div className="row p-0 m-0">
                             <div className="col">
                                 <div className="d-flex flex-column flex-nowrap align-items-start">
                                     <Link activeClass="active"
@@ -83,15 +83,15 @@ class Footer extends Component{
                             </div>
                         </div>
                     </div>
-                    <div className="col my-2">
-                        <div className="row w-100 border-bottom border-secondary">
+                    <div className="col mb-auto">
+                        <div className="row w-100 border-bottom border-secondary p-0 m-0">
                             <div className="col">
                                 <h5>
                                     About This Website
                                 </h5>
                             </div>
                         </div>
-                        <div className="row">
+                        <div className="row p-0 m-0">
                             <div className="col">
                                 <p>
                                     This website was developed by Mason Pohler using JavaScript, JSX, and CSS. This website was
@@ -101,19 +101,23 @@ class Footer extends Component{
                         </div>
                     </div>
                 </div>
-                <div className="row w-100 border-top border-secondary footer-content">
-                    <div className="col text-left text-nowrap pt-2 pl-0">
-                        <p>
-                            &copy; 2020 Mason Pohler
-                        </p>
-                    </div>
-                    <div className="col text-right text-nowrap pt-2 pr-0 float-right">
-                        <button className="btn btn-link text-white-50 text-nowrap p-0 float-right">
-                            Privacy Policy
-                        </button>
+                <div className="row w-100 footer-content mb-auto px-1">
+                    <div className="col my-2">
+                        <div className="row w-100 border-top border-secondary p-0 m-0">
+                            <div className="col text-left text-nowrap pt-2 pl-0">
+                                <p>
+                                    &copy; 2020 Mason Pohler
+                                </p>
+                            </div>
+                            <div className="col text-right text-nowrap pt-2 pr-0 float-right">
+                                <button className="btn btn-link text-white-50 text-nowrap p-0 float-right">
+                                    Privacy Policy
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </React.Fragment>
         )
     }
 }
