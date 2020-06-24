@@ -13,3 +13,4 @@ export const SET_CONTACT_ME_MODAL_VISIBLE = "SET_CONTACT_ME_MODAL_VISIBLE";
 export const SET_FROM = "SET_FROM";
 export const SET_SUBJECT = "SET_SUBJECT";
 export const SET_BODY = "SET_BODY";
+export const SET_ERRORS = "SET_ERROES";

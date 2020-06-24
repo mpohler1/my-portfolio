@@ -10,7 +10,7 @@ import {
     SET_PROJECTS_MODAL_VISIBLE,
     SET_PROJECT_HOVERED,
     SET_SELECTED_PROJECT,
-    SET_CONTACT_ME_MODAL_VISIBLE, SET_FROM, SET_SUBJECT, SET_BODY
+    SET_CONTACT_ME_MODAL_VISIBLE, SET_FROM, SET_SUBJECT, SET_BODY, SET_ERRORS
 } from "./actionTypes";
 
 export const setBackgroundOpacity = backgroundOpacity => (
@@ -136,6 +136,15 @@ export const setBody = body => (
         type: SET_BODY,
         payload: {
             body: body
+        }
+    }
+);
+
+export const setErrors = errors => (
+    {
+        type: SET_ERRORS,
+        payload: {
+            errors: errors
         }
     }
 );

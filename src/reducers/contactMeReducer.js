@@ -1,10 +1,11 @@
-import {SET_BODY, SET_CONTACT_ME_MODAL_VISIBLE, SET_FROM, SET_SUBJECT} from "../actions/actionTypes";
+import {SET_BODY, SET_CONTACT_ME_MODAL_VISIBLE, SET_ERRORS, SET_FROM, SET_SUBJECT} from "../actions/actionTypes";
 
 function contactMeReducer(state={
     modalVisible: false,
     from: "",
     subject: "",
-    body: ""
+    body: "",
+    errors: {}
 }, action) {
     switch (action.type) {
         case SET_CONTACT_ME_MODAL_VISIBLE:
@@ -25,6 +26,11 @@ function contactMeReducer(state={
         case SET_BODY:
             return Object.assign({}, state, {
                 body: action.payload.body
+            });
+
+        case SET_ERRORS:
+            return Object.assign({}, state, {
+                errors: action.payload.errors
             });
 
         default:

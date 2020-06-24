@@ -2,11 +2,27 @@ import React, {Component} from "react";
 import {
     sendMailRequest,
     sendMailSuccess,
-    sendMailFailure, setFrom, setSubject, setBody
+    sendMailFailure,
+    setContactMeModalVisible,
+    setFrom,
+    setSubject,
+    setBody,
+    setErrors
 } from "../actions/actions";
 import {connect} from "react-redux";
+import validate from "validate.js";
+import {CONSTRAINTS} from "../resources/constraints";
 
 class ContactMeForm extends Component {
+
+    validateForm() {
+        const errors = Object.assign({}, validate({
+            from: this.props.from,
+            subject: this.props.subject,
+            body: this.props.body
+        }, CONSTRAINTS));
+        this.props.setErrors(errors);
+    }
 
     render() {
         return (
@@ -16,6 +32,9 @@ class ContactMeForm extends Component {
                         <div className="form-row">
                             <label htmlFor="from">
                                 From
+                                <span className="text-danger">
+                                    {" "}{this.props.errors.from}
+                                </span>
                             </label>
                             <input className="form-control"
                                    id="from"
@@ -27,6 +46,9 @@ class ContactMeForm extends Component {
                         <div className="form-row">
                             <label htmlFor="subject">
                                 Subject
+                                <span className="text-danger">
+                                    {" "}{this.props.errors.subject}
+                                </span>
                             </label>
                             <input className="form-control"
                                    id="subject"
@@ -38,6 +60,9 @@ class ContactMeForm extends Component {
                         <div className="form-row">
                             <label htmlFor="body">
                                 Message
+                                <span className="text-danger">
+                                    {" "}{this.props.errors.body}
+                                </span>
                             </label>
                             <textarea className="form-control overflow-auto message-body"
                                       id="body"
@@ -50,10 +75,12 @@ class ContactMeForm extends Component {
                 </div>
                 <div className="row">
                     <div>
-                    <button className="btn btn-primary ml-1">
+                    <button className="btn btn-primary ml-1"
+                            onClick={() => this.validateForm()}>
                         Send
                     </button>
-                    <button className="btn btn-secondary ml-3 mr-1">
+                    <button className="btn btn-secondary ml-3 mr-1"
+                            onClick={() => this.props.setContactMeModalVisible(false)}>
                         Cancel
                     </button>
                     </div>
@@ -67,7 +94,8 @@ const mapStateToProps = state => {
     return {
         from: state.contactMe.from,
         subject: state.contactMe.subject,
-        body: state.contactMe.body
+        body: state.contactMe.body,
+        errors: state.contactMe.errors
     };
 };
 
@@ -75,7 +103,9 @@ export default connect(mapStateToProps, {
     sendMailRequest,
     sendMailSuccess,
     sendMailFailure,
+    setContactMeModalVisible,
     setFrom,
     setSubject,
-    setBody
+    setBody,
+    setErrors
 })(ContactMeForm);
