@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import ContactMeModal from "./ContactMeModal";
 import {setContactMeModalVisible} from "../actions/actions";
 import {connect} from "react-redux";
+import {contactInfo} from "../resources/contactMe";
 
 class ContactMe extends Component {
 
@@ -20,6 +21,14 @@ class ContactMe extends Component {
                         Lets Get In Touch
                     </button>
                     <ContactMeModal/>
+                </div>
+                <div className="row mb-auto">
+                    <p className="text-white-50">
+                        Or email me directly at
+                        <span className="text-white">
+                            {" "}{contactInfo.email}
+                        </span>
+                    </p>
                 </div>
                 <div className="row mb-auto border-top border-light w-100">
                     <Footer/>

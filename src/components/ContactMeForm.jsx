@@ -12,8 +12,17 @@ import {
 import {connect} from "react-redux";
 import validate from "validate.js";
 import {CONSTRAINTS} from "../resources/constraints";
+import {sendMail} from "../service/mailService";
 
 class ContactMeForm extends Component {
+
+    handleSendButtonClick() {
+        const errors = this.validateForm();
+        if (Object.keys(errors).length === 0 && errors.constructor === Object) {
+            this.sendMail();
+        }
+        this.props.setErrors(errors);
+    }
 
     validateForm() {
         const errors = Object.assign({}, validate({
@@ -21,7 +30,18 @@ class ContactMeForm extends Component {
             subject: this.props.subject,
             body: this.props.body
         }, CONSTRAINTS));
-        this.props.setErrors(errors);
+        return errors;
+    }
+
+    sendMail() {
+        this.props.sendMailRequest();
+        sendMail(this.props.from, this.props.subject, this.props.body).then(([response, json]) => {
+            if (response.status === 200) {
+                this.props.sendMailSuccess(json);
+            } else {
+                this.props.sendMailFailure(json);
+            }
+        })
     }
 
     render() {
@@ -76,7 +96,7 @@ class ContactMeForm extends Component {
                 <div className="row">
                     <div>
                     <button className="btn btn-primary ml-1"
-                            onClick={() => this.validateForm()}>
+                            onClick={() => this.handleSendButtonClick()}>
                         Send
                     </button>
                     <button className="btn btn-secondary ml-3 mr-1"
