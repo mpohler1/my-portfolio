@@ -18,19 +18,21 @@ class ContactMeForm extends Component {
 
     handleSendButtonClick() {
         const errors = this.validateForm();
+
+        // "if errors is an empty object"
         if (Object.keys(errors).length === 0 && errors.constructor === Object) {
             this.sendMail();
         }
+
         this.props.setErrors(errors);
     }
 
     validateForm() {
-        const errors = Object.assign({}, validate({
+        return Object.assign({}, validate({
             name: this.props.name,
             email: this.props.email,
             body: this.props.body
         }, CONSTRAINTS));
-        return errors;
     }
 
     sendMail() {
