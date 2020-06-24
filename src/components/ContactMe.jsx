@@ -9,9 +9,9 @@ class ContactMe extends Component {
 
     render() {
         return (
-            <div className="container-fluid page bg-blue center text-white" id="contactMe">
+            <div className="container-fluid page bg-blue center text-white-50" id="contactMe">
                 <div className="row my-auto">
-                    <h1 className="display-4 font-weight-light">
+                    <h1 className="display-4 font-weight-light text-white">
                         Like what you see?
                     </h1>
                 </div>
@@ -30,7 +30,7 @@ class ContactMe extends Component {
                         </span>
                     </p>
                 </div>
-                <div className="row mb-auto border-top border-secondary w-100">
+                <div className="row w-100">
                     <Footer/>
                 </div>
             </div>

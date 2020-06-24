@@ -1,16 +1,100 @@
 import React, {Component} from "react";
+import {contactInfo} from "../resources/contactMe";
+import {Link} from "react-scroll/modules";
+import {convertRemToPixels} from "../service/rem";
 
 class Footer extends Component{
 
     render() {
         return (
-            <div className="container-fluid">
-                <div className="row">
+            <div className="container-fluid footer center border-top border-secondary p-0">
+                <div className="row w-100 footer-content my-auto">
                     <div className="col">
-                        Contact Information
+                        <div className="container-fluid my-auto">
+                            <div className="row w-100 border-bottom border-secondary">
+                                <div className="col">
+                                    <h5>
+                                       Contact
+                                    </h5>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col">
+                                    <p>
+                                        {contactInfo.name}<br/>
+                                        {contactInfo.email}<br/>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div className="col">
-                        Site Navigation
+                        <div className="container-fluid my-auto">
+                            <div className="row w-100 border-bottom border-secondary">
+                                <div className="col">
+                                    <h5>
+                                        Site Navigation
+                                    </h5>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col">
+                                    <div className="d-flex flex-column flex-nowrap align-items-start">
+                                        <Link activeClass="active"
+                                              to="home"
+                                              spy={true}
+                                              smooth={true}
+                                              offset={-convertRemToPixels(5)}>
+                                            <p className="m-0 btn btn-link text-white-50 text-nowrap p-0">
+                                                Home
+                                            </p>
+                                        </Link>
+                                        <Link activeClass="active"
+                                              to="projects"
+                                              spy={true}
+                                              smooth={true}
+                                              offset={-convertRemToPixels(5)}>
+                                            <p className="m-0 btn btn-link text-white-50 text-nowrap p-0">
+                                                My Projects
+                                            </p>
+                                        </Link>
+                                        <Link activeClass="active"
+                                              to="testimonials"
+                                              spy={true}
+                                              smooth={true}
+                                              offset={-convertRemToPixels(5)}>
+                                            <p className="m-0 btn btn-link text-white-50 text-nowrap p-0">
+                                                Testimonials
+                                            </p>
+                                        </Link>
+                                        <Link activeClass="active"
+                                              to="contactMe"
+                                              spy={true}
+                                              smooth={true}
+                                              offset={-convertRemToPixels(5)}>
+                                            <p className="m-0 btn btn-link text-white-50 text-nowrap p-0">
+                                                Contact Me
+                                            </p>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col">
+                        About This Website
+                    </div>
+                </div>
+                <div className="row w-100 border-top border-secondary p-0">
+                    <div className="col text-left text-nowrap pt-2 pl-0">
+                        <p>
+                            &copy; 2020 Mason Pohler
+                        </p>
+                    </div>
+                    <div className="col text-right text-nowrap pt-2 pr-0 float-right">
+                        <button className="btn btn-link text-white-50 text-nowrap p-0 float-right">
+                            Privacy Policy
+                        </button>
                     </div>
                 </div>
             </div>

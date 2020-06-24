@@ -22,10 +22,6 @@
     background-color: #0a1823;
 }
 
-.bg-black {
-    background-color: #0b0f11
-}
-
 .center {
     display: flex;
     flex-direction: column;
@@ -35,6 +31,14 @@
 
 .content {
     max-width: 70em;
+}
+
+.footer {
+    min-height: 40vh;
+}
+
+.footer-content {
+    max-width: 1400px;
 }
 
 .modal-shadow {
