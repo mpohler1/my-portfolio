@@ -40,7 +40,7 @@ class ProjectGrid extends Component{
                     {this.props.projects.map(project => (
                         <div className="col p-2">
                             <div className="project-box rounded"
-                                 onMouseEnter={() => this.props.setProjectHovered(project, true)}
+                                 onMouseOver={() => this.props.setProjectHovered(project, true)}
                                  onMouseLeave={() => this.props.setProjectHovered(project, false)}>
                                 <div className="p-2 center text-white">
                                     <h4>
