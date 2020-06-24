@@ -30,7 +30,7 @@ class ContactMe extends Component {
                         </span>
                     </p>
                 </div>
-                <div className="row mb-auto border-top border-light w-100">
+                <div className="row mb-auto border-top border-secondary w-100">
                     <Footer/>
                 </div>
             </div>

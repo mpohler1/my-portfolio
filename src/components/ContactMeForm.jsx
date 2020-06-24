@@ -4,8 +4,8 @@ import {
     sendMailSuccess,
     sendMailFailure,
     setContactMeModalVisible,
-    setFrom,
-    setSubject,
+    setEmail,
+    setName,
     setBody,
     setErrors
 } from "../actions/actions";
@@ -26,8 +26,8 @@ class ContactMeForm extends Component {
 
     validateForm() {
         const errors = Object.assign({}, validate({
-            from: this.props.from,
-            subject: this.props.subject,
+            name: this.props.name,
+            email: this.props.email,
             body: this.props.body
         }, CONSTRAINTS));
         return errors;
@@ -35,7 +35,7 @@ class ContactMeForm extends Component {
 
     sendMail() {
         this.props.sendMailRequest();
-        sendMail(this.props.from, this.props.subject, this.props.body).then(([response, json]) => {
+        sendMail(this.props.name, this.props.email, this.props.body).then(([response, json]) => {
             if (response.status === 200) {
                 this.props.sendMailSuccess(json);
             } else {
@@ -50,32 +50,33 @@ class ContactMeForm extends Component {
                 <div className="row">
                     <div className="form-group w-100 mx-2">
                         <div className="form-row">
-                            <label htmlFor="from">
-                                From
+                            <label htmlFor="name">
+                                Name
                                 <span className="text-danger">
-                                    {" "}{this.props.errors.from}
+                                    {" "}{this.props.errors.name}
+                                </span>
+                            </label>
+                            <input className="form-control"
+                                   id="name"
+                                   type="text"
+                                   placeholder="Your Name"
+                                   value={this.props.name}
+                                   onChange={event => this.props.setName(event.target.value)}/>
+
+                        </div>
+                        <div className="form-row">
+                            <label htmlFor="email">
+                                Email
+                                <span className="text-danger">
+                                    {" "}{this.props.errors.email}
                                 </span>
                             </label>
                             <input className="form-control"
                                    id="from"
                                    type="text"
                                    placeholder="Your Email Address"
-                                   value={this.props.from}
-                                   onChange={event => this.props.setFrom(event.target.value)}/>
-                        </div>
-                        <div className="form-row">
-                            <label htmlFor="subject">
-                                Subject
-                                <span className="text-danger">
-                                    {" "}{this.props.errors.subject}
-                                </span>
-                            </label>
-                            <input className="form-control"
-                                   id="subject"
-                                   type="text"
-                                   placeholder="Subject"
-                                   value={this.props.subject}
-                                   onChange={event => this.props.setSubject(event.target.value)}/>
+                                   value={this.props.email}
+                                   onChange={event => this.props.setEmail(event.target.value)}/>
                         </div>
                         <div className="form-row">
                             <label htmlFor="body">
@@ -112,8 +113,8 @@ class ContactMeForm extends Component {
 
 const mapStateToProps = state => {
     return {
-        from: state.contactMe.from,
-        subject: state.contactMe.subject,
+        name: state.contactMe.name,
+        email: state.contactMe.email,
         body: state.contactMe.body,
         errors: state.contactMe.errors
     };
@@ -124,8 +125,8 @@ export default connect(mapStateToProps, {
     sendMailSuccess,
     sendMailFailure,
     setContactMeModalVisible,
-    setFrom,
-    setSubject,
+    setEmail,
+    setName,
     setBody,
     setErrors
 })(ContactMeForm);

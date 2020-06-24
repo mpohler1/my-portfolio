@@ -1,5 +1,11 @@
 export const CONSTRAINTS = {
-    from: {
+    name: {
+        length: {
+            minimum: 1,
+            message: "cannot be empty."
+        }
+    },
+    email: {
         format: {
             // Pattern was found on https://emailregex.com
             // eslint-disable-next-line
@@ -7,16 +13,10 @@ export const CONSTRAINTS = {
             message: "must be a valid email address"
         }
     },
-    subject: {
-        format: {
-            pattern: /^[\w .]+$/,
-            message: "must contain at least 1 alphanumeric character"
-        }
-    },
     body: {
-        format: {
-            pattern: /^[\w .]+$/,
-            message: "must contain at least 1 alphanumeric character"
+        length: {
+            minimum: 1,
+            message: "cannot be empty."
         }
     }
 };

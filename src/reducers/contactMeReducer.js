@@ -1,9 +1,9 @@
-import {SET_BODY, SET_CONTACT_ME_MODAL_VISIBLE, SET_ERRORS, SET_FROM, SET_SUBJECT} from "../actions/actionTypes";
+import {SET_BODY, SET_CONTACT_ME_MODAL_VISIBLE, SET_ERRORS, SET_EMAIL, SET_NAME} from "../actions/actionTypes";
 
 function contactMeReducer(state={
     modalVisible: false,
-    from: "",
-    subject: "",
+    name: "",
+    email: "",
     body: "",
     errors: {}
 }, action) {
@@ -13,14 +13,14 @@ function contactMeReducer(state={
                 modalVisible: action.payload.modalVisible
             });
 
-        case SET_FROM:
+        case SET_NAME:
             return Object.assign({}, state, {
-                from: action.payload.from
+                name: action.payload.name
             });
 
-        case SET_SUBJECT:
+        case SET_EMAIL:
             return Object.assign({}, state, {
-                subject: action.payload.subject
+                email: action.payload.email
             });
 
         case SET_BODY:

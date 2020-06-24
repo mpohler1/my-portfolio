@@ -1,13 +1,13 @@
 const apiURL = "http://192.168.1.69:9000";
 
-export function sendMail(from, subject, body) {
+export function sendMail(name, email, body) {
     const endpoint = apiURL + "/mail/send";
     const headers = {
         'content-type': 'application/json'
     };
     const mailModel = {
-        from: from,
-        subject: subject,
+        name: name,
+        email: email,
         body: body
     };
     return fetch(endpoint, {

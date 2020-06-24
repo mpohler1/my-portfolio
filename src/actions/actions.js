@@ -10,7 +10,7 @@ import {
     SET_PROJECTS_MODAL_VISIBLE,
     SET_PROJECT_HOVERED,
     SET_SELECTED_PROJECT,
-    SET_CONTACT_ME_MODAL_VISIBLE, SET_FROM, SET_SUBJECT, SET_BODY, SET_ERRORS
+    SET_CONTACT_ME_MODAL_VISIBLE, SET_EMAIL, SET_NAME, SET_BODY, SET_ERRORS
 } from "./actionTypes";
 
 export const setBackgroundOpacity = backgroundOpacity => (
@@ -113,20 +113,20 @@ export const setContactMeModalVisible = modalVisible => (
     }
 );
 
-export const setFrom = from => (
+export const setName = name => (
     {
-        type: SET_FROM,
+        type: SET_NAME,
         payload: {
-            from: from
+            name: name
         }
     }
 );
 
-export const setSubject = subject => (
+export const setEmail = email => (
     {
-        type: SET_SUBJECT,
+        type: SET_EMAIL,
         payload: {
-            subject: subject
+            email: email
         }
     }
 );

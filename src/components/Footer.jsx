@@ -6,7 +6,12 @@ class Footer extends Component{
         return (
             <div className="container-fluid">
                 <div className="row">
-
+                    <div className="col">
+                        Contact Information
+                    </div>
+                    <div className="col">
+                        Site Navigation
+                    </div>
                 </div>
             </div>
         )
