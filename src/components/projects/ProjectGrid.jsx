@@ -63,7 +63,7 @@ class ProjectGrid extends Component{
                                 {
                                     !project.hovered &&
                                         <div>
-                                            <img className="card-img rounded"
+                                            <img className="card-img rounded border border-dark"
                                                  src={project.previewURL}
                                                  alt={project.name}/>
                                         </div>
