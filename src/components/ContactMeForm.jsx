@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {
     sendMailRequest,
     sendMailSuccess,
-    sendMailFailure
+    sendMailFailure, setFrom, setSubject, setBody
 } from "../actions/actions";
 import {connect} from "react-redux";
 
@@ -21,7 +21,8 @@ class ContactMeForm extends Component {
                                    id="from"
                                    type="text"
                                    placeholder="Your Email Address"
-                                   value={this.props.from}/>
+                                   value={this.props.from}
+                                   onChange={event => this.props.setFrom(event.target.value)}/>
                         </div>
                         <div className="form-row">
                             <label htmlFor="subject">
@@ -31,17 +32,19 @@ class ContactMeForm extends Component {
                                    id="subject"
                                    type="text"
                                    placeholder="Subject"
-                                   value={this.props.subject}/>
+                                   value={this.props.subject}
+                                   onChange={event => this.props.setSubject(event.target.value)}/>
                         </div>
                         <div className="form-row">
                             <label htmlFor="body">
                                 Message
                             </label>
                             <textarea className="form-control overflow-auto message-body"
-                                   id="body"
-                                   cols="15"
-                                   placeholder="Message Body"
-                                   value={this.props.body}/>
+                                      id="body"
+                                      cols="15"
+                                      placeholder="Message Body"
+                                      value={this.props.body}
+                                      onChange={event => this.props.setBody(event.target.value)}/>
                         </div>
                     </div>
                 </div>
@@ -71,5 +74,8 @@ const mapStateToProps = state => {
 export default connect(mapStateToProps, {
     sendMailRequest,
     sendMailSuccess,
-    sendMailFailure
+    sendMailFailure,
+    setFrom,
+    setSubject,
+    setBody
 })(ContactMeForm);
