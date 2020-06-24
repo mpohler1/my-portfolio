@@ -27,7 +27,7 @@ class Footer extends Component{
                                             LinkedIn
                                         </a><br/>
                                         <a className="text-white" href={contactInfo.gitHub}>
-                                            Github
+                                            GitHub
                                         </a>
                                     </p>
                                 </div>
