@@ -10,7 +10,7 @@ import {
     SET_PROJECTS_MODAL_VISIBLE,
     SET_PROJECT_HOVERED,
     SET_SELECTED_PROJECT,
-    SET_CONTACT_ME_MODAL_VISIBLE, SET_EMAIL, SET_NAME, SET_BODY, SET_ERRORS
+    SET_CONTACT_ME_MODAL_VISIBLE, SET_EMAIL, SET_NAME, SET_BODY, SET_ERRORS, SET_DRAWER_OPEN
 } from "./actionTypes";
 
 export const setBackgroundOpacity = backgroundOpacity => (
@@ -63,6 +63,15 @@ export const sendMailFailure = responseMessage => (
         type: SEND_MAIL_FAILURE,
         payload: {
             responseMessage: responseMessage
+        }
+    }
+);
+
+export const setDrawerOpen = drawerOpen => (
+    {
+        type: SET_DRAWER_OPEN,
+        payload: {
+            drawerOpen: drawerOpen
         }
     }
 );

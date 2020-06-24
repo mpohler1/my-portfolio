@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
-import {setBackgroundOpacity} from "../actions/actions";
+import {setBackgroundOpacity, setDrawerOpen} from "../actions/actions";
 import {Link} from "react-scroll";
 import {convertRemToPixels} from "../service/rem";
 
@@ -36,7 +36,9 @@ class Navbar extends Component {
                     this.baseBackgroundColor[2] + ", " +
                     this.props.backgroundOpacity + ")"
                 )}>
-                <button className="navbar-toggler ml-2" type="button">
+                <button className="navbar-toggler ml-2"
+                        type="button"
+                        onClick={() => this.props.setDrawerOpen(true)}>
                     <span className="navbar-toggler-icon"/>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
@@ -90,4 +92,7 @@ const mapStateToProps = state => {
     };
 };
 
-export default connect(mapStateToProps, {setBackgroundOpacity})(Navbar);
+export default connect(mapStateToProps, {
+    setBackgroundOpacity,
+    setDrawerOpen
+})(Navbar);
