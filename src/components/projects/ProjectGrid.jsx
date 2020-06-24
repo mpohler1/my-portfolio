@@ -36,7 +36,7 @@ class ProjectGrid extends Component{
     render() {
         return (
             <div className="container-fluid p-0 m-0">
-                <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 p-0 m-0">
+                <div className="row row-cols-1 row-cols-md-2 row-cols-xl-3 p-0 m-0">
                     {this.props.projects.map(project => (
                         <div className="col p-2">
                             <div className="project-box rounded"
