@@ -9,21 +9,21 @@ class ContactMe extends Component {
 
     render() {
         return (
-            <div className="container-fluid page bg-blue center text-white-50 px-0" id="contactMe">
-                <div className="row my-auto px-4">
+            <div className="container-fluid page bg-blue center text-white-50" id="contactMe">
+                <div className="row my-3 my-sm-auto px-2">
                     <h1 className="display-4 font-weight-light text-white text-center">
                         Like what you see?
                     </h1>
                 </div>
-                <div className="row mb-auto px-4">
+                <div className="row mb-3 mb-sm-auto px-2">
                     <button className="btn btn-lg btn-primary"
                             onClick={() => this.props.setContactMeModalVisible(true)}>
                         Lets Get In Touch
                     </button>
                     <ContactMeModal/>
                 </div>
-                <div className="row mb-auto px-4">
-                    <p className="text-white-50">
+                <div className="row mb-3 mb-sm-auto px-2">
+                    <p className="text-white-50 text-center">
                         Or email me directly at
                         <span className="text-white">
                             {" "}{contactInfo.email}

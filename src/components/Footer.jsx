@@ -8,17 +8,17 @@ class Footer extends Component{
     render() {
         return (
             <React.Fragment>
-                <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 w-100 footer-content mb-auto px-1">
-                    <div className="col mb-auto">
+                <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 w-100 footer-content mb-3 mb-sm-auto p-0 m-0">
+                    <div className="col mb-3 mb-sm-auto px-0 px-sm-3">
                         <div className="row w-100 border-bottom border-secondary p-0 m-0">
-                            <div className="col">
+                            <div className="col px-0 px-sm-3">
                                 <h5>
                                    Contact
                                 </h5>
                             </div>
                         </div>
                         <div className="row p-0 m-0">
-                            <div className="col">
+                            <div className="col px-0 px-sm-3">
                                 <p>
                                     {contactInfo.name}<br/>
                                     {contactInfo.email}<br/>
@@ -32,16 +32,16 @@ class Footer extends Component{
                             </div>
                         </div>
                     </div>
-                    <div className="col mb-auto">
+                    <div className="col mb-3 mb-sm-auto px-0 px-sm-3">
                         <div className="row w-100 border-bottom border-secondary p-0 m-0">
-                            <div className="col">
+                            <div className="col px-0 px-sm-3">
                                 <h5>
                                     Site Navigation
                                 </h5>
                             </div>
                         </div>
                         <div className="row p-0 m-0">
-                            <div className="col">
+                            <div className="col px-0 px-sm-3">
                                 <div className="d-flex flex-column flex-nowrap align-items-start">
                                     <Link activeClass="active"
                                           to="home"
@@ -83,16 +83,16 @@ class Footer extends Component{
                             </div>
                         </div>
                     </div>
-                    <div className="col mb-auto">
+                    <div className="col px-0 px-sm-3">
                         <div className="row w-100 border-bottom border-secondary p-0 m-0">
-                            <div className="col">
+                            <div className="col px-0 px-sm-3">
                                 <h5>
                                     About This Website
                                 </h5>
                             </div>
                         </div>
                         <div className="row p-0 m-0">
-                            <div className="col">
+                            <div className="col px-0 px-sm-3">
                                 <p>
                                     This website was developed by Mason Pohler using JavaScript, JSX, and CSS. This website was
                                     built using ReactJS, Redux, and Bootstrap. <a className="text-white" href="https://github.com/mpohler1/mpohler1.github.io">View Source</a>
@@ -101,15 +101,15 @@ class Footer extends Component{
                         </div>
                     </div>
                 </div>
-                <div className="row w-100 footer-content mb-auto px-1">
-                    <div className="col my-2">
+                <div className="row w-100 footer-content mb-3 mb-sm-auto">
+                    <div className="col px-0 px-sm-3">
                         <div className="row w-100 border-top border-secondary p-0 m-0">
-                            <div className="col text-left text-nowrap pt-2 pl-0">
+                            <div className="col text-left text-nowrap pt-2 pl-0 pl-sm-3">
                                 <p>
                                     &copy; 2020 Mason Pohler
                                 </p>
                             </div>
-                            <div className="col text-right text-nowrap pt-2 pr-0 float-right">
+                            <div className="col text-right text-nowrap pt-2 float-right pr-0 pr-sm-3">
                                 <button className="btn btn-link text-white-50 text-nowrap p-0 float-right">
                                     Privacy Policy
                                 </button>
