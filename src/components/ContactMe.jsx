@@ -3,7 +3,7 @@ import Footer from "./Footer";
 import ContactMeModal from "./ContactMeModal";
 import {setContactMeModalVisible} from "../actions/actions";
 import {connect} from "react-redux";
-import {contactInfo} from "../resources/contactMe";
+import {contactInfo} from "../resources/contactInfo";
 
 class ContactMe extends Component {
 

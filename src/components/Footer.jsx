@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {contactInfo} from "../resources/contactMe";
+import {contactInfo} from "../resources/contactInfo";
 import {Link} from "react-scroll/modules";
 import {convertRemToPixels} from "../service/rem";
 
@@ -23,6 +23,12 @@ class Footer extends Component{
                                     <p>
                                         {contactInfo.name}<br/>
                                         {contactInfo.email}<br/>
+                                        <a className="text-white" href={contactInfo.linkedIn}>
+                                            LinkedIn
+                                        </a><br/>
+                                        <a className="text-white" href={contactInfo.gitHub}>
+                                            Github
+                                        </a>
                                     </p>
                                 </div>
                             </div>
