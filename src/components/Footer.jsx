@@ -8,8 +8,8 @@ class Footer extends Component{
     render() {
         return (
             <div className="container-fluid footer center border-top border-secondary p-0">
-                <div className="row w-100 footer-content my-auto">
-                    <div className="col">
+                <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 w-100 footer-content my-auto">
+                    <div className="col my-2">
                         <div className="container-fluid my-auto">
                             <div className="row w-100 border-bottom border-secondary">
                                 <div className="col">
@@ -28,7 +28,7 @@ class Footer extends Component{
                             </div>
                         </div>
                     </div>
-                    <div className="col">
+                    <div className="col my-2">
                         <div className="container-fluid my-auto">
                             <div className="row w-100 border-bottom border-secondary">
                                 <div className="col">
@@ -81,20 +81,22 @@ class Footer extends Component{
                             </div>
                         </div>
                     </div>
-                    <div className="col">
-                        <div className="row w-100 border-bottom border-secondary">
-                            <div className="col">
-                                <h5>
-                                    About This Website
-                                </h5>
+                    <div className="col my-2">
+                        <div className="container-fluid my-auto">
+                            <div className="row w-100 border-bottom border-secondary">
+                                <div className="col">
+                                    <h5>
+                                        About This Website
+                                    </h5>
+                                </div>
                             </div>
-                        </div>
-                        <div className="row">
-                            <div className="col">
-                                <p>
-                                    This website was developed by Mason Pohler using JavaScript, JSX, and CSS. This website was
-                                    built using ReactJS, Redux, and Bootstrap. <a className="text-white" href="https://github.com/mpohler1/mpohler1.github.io">View Source</a>
-                                </p>
+                            <div className="row">
+                                <div className="col">
+                                    <p>
+                                        This website was developed by Mason Pohler using JavaScript, JSX, and CSS. This website was
+                                        built using ReactJS, Redux, and Bootstrap. <a className="text-white" href="https://github.com/mpohler1/mpohler1.github.io">View Source</a>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
