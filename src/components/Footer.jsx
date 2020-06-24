@@ -82,7 +82,21 @@ class Footer extends Component{
                         </div>
                     </div>
                     <div className="col">
-                        About This Website
+                        <div className="row w-100 border-bottom border-secondary">
+                            <div className="col">
+                                <h5>
+                                    About This Website
+                                </h5>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col">
+                                <p>
+                                    This website was developed by Mason Pohler using JavaScript, JSX, and CSS. This website was
+                                    built using ReactJS, Redux, and Bootstrap. <a className="text-white" href="https://github.com/mpohler1/mpohler1.github.io">View Source</a>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="row w-100 border-top border-secondary p-0">
