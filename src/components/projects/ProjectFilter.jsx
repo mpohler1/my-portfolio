@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-import {ALL_PROJECTS, LARGE_PROJECTS, SMALL_PROJECTS} from "../resources/filterModes";
+import {ALL_PROJECTS, LARGE_PROJECTS, SMALL_PROJECTS} from "../../resources/filterModes";
 import {connect} from "react-redux";
-import {setFilterMode} from "../actions/actions";
+import {setFilterMode} from "../../actions/actions";
 
 const classListWithActive = "nav-link active";
 const classListWithoutActive = "nav-link";

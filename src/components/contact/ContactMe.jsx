@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import Footer from "./Footer";
 import ContactMeModal from "./ContactMeModal";
-import {setContactMeModalVisible} from "../actions/actions";
+import {setContactMeModalVisible} from "../../actions/actions";
 import {connect} from "react-redux";
-import {contactInfo} from "../resources/contactInfo";
+import {contactInfo} from "../../resources/contactInfo";
 
 class ContactMe extends Component {
 

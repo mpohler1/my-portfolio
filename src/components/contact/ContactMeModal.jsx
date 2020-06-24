@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {setContactMeModalVisible} from "../actions/actions";
+import {setContactMeModalVisible} from "../../actions/actions";
 import {connect} from "react-redux";
 import ContactMeForm from "./ContactMeForm";
 

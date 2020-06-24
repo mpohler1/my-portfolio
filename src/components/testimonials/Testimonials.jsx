@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {testimonials} from "../resources/testimonials";
+import {testimonials} from "../../resources/testimonials";
 
 class Testimonials extends Component {
 

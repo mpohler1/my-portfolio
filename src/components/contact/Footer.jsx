@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-import {contactInfo} from "../resources/contactInfo";
+import {contactInfo} from "../../resources/contactInfo";
 import {Link} from "react-scroll/modules";
-import {convertRemToPixels} from "../service/rem";
+import {convertRemToPixels} from "../../service/rem";
 
 class Footer extends Component{
 

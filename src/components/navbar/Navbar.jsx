@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
-import {setBackgroundOpacity, setDrawerOpen} from "../actions/actions";
+import {setBackgroundOpacity, setDrawerOpen} from "../../actions/actions";
 import {Link} from "react-scroll";
-import {convertRemToPixels} from "../service/rem";
+import {convertRemToPixels} from "../../service/rem";
 
 class Navbar extends Component {
     baseBackgroundColor = [10, 24, 35];

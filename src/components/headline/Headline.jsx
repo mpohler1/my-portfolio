@@ -1,8 +1,8 @@
 import React, {Component} from "react";
-import {headline} from "../resources/headline";
+import {headline} from "../../resources/headline";
 import {connect} from "react-redux";
 import {Link} from "react-scroll";
-import {convertRemToPixels} from "../service/rem";
+import {convertRemToPixels} from "../../service/rem";
 
 class Headline extends Component {
 

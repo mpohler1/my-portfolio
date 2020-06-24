@@ -8,11 +8,11 @@ import {
     setName,
     setBody,
     setErrors
-} from "../actions/actions";
+} from "../../actions/actions";
 import {connect} from "react-redux";
 import validate from "validate.js";
-import {CONSTRAINTS} from "../resources/constraints";
-import {sendMail} from "../service/mailService";
+import {CONSTRAINTS} from "../../resources/constraints";
+import {sendMail} from "../../service/mailService";
 
 class ContactMeForm extends Component {
 

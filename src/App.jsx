@@ -1,9 +1,9 @@
 import React from 'react';
-import Testimonials from "./components/Testimonials";
-import Projects from "./components/Projects";
-import ContactMe from "./components/ContactMe";
-import Navbar from "./components/Navbar";
-import Headline from "./components/Headline";
+import Testimonials from "./components/testimonials/Testimonials";
+import Projects from "./components/projects/Projects";
+import ContactMe from "./components/contact/ContactMe";
+import Navbar from "./components/navbar/Navbar";
+import Headline from "./components/headline/Headline";
 import './App.css';
 
 function App() {

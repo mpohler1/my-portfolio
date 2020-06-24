@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
-import {setProjectsModalVisible} from "../actions/actions";
+import {setProjectsModalVisible} from "../../actions/actions";
 
 class ProjectModal extends Component {
 

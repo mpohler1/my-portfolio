@@ -7,9 +7,9 @@ import {
     setProjectHovered,
     setSelectedProject,
     setProjectsModalVisible
-} from "../actions/actions";
-import {fetchProjects} from "../service/projectsService";
-import {ALL_PROJECTS, LARGE_PROJECTS, SMALL_PROJECTS} from "../resources/filterModes";
+} from "../../actions/actions";
+import {fetchProjects} from "../../service/projectsService";
+import {ALL_PROJECTS, LARGE_PROJECTS, SMALL_PROJECTS} from "../../resources/filterModes";
 
 class ProjectGrid extends Component{
 
