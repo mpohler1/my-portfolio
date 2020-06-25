@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {contactInfo} from "../../resources/contactInfo";
 import {Link} from "react-scroll/modules";
 import {convertRemToPixels} from "../../service/rem";
+import {PRIVACY_POLICY_URL} from "../../resources/privacyPolicy";
 
 class Footer extends Component{
 
@@ -110,9 +111,10 @@ class Footer extends Component{
                                 </p>
                             </div>
                             <div className="col text-right text-nowrap pt-2 float-right pr-0 pr-sm-3">
-                                <button className="btn btn-link text-white-50 text-nowrap p-0 float-right">
+                                <a className="btn btn-link text-white-50 text-nowrap p-0 float-right"
+                                   href={PRIVACY_POLICY_URL}>
                                     Privacy Policy
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
