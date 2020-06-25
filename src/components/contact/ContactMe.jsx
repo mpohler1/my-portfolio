@@ -7,6 +7,12 @@ import {contactInfo} from "../../resources/contactInfo";
 
 class ContactMe extends Component {
 
+    handleKeyDown(event) {
+        if (event.keyCode === 27) { // escape key
+            this.props.setContactMeModalVisible(false);
+        }
+    }
+
     render() {
         return (
             <div className="container-fluid page bg-blue center text-white-50" id="contactMe">
@@ -17,7 +23,8 @@ class ContactMe extends Component {
                 </div>
                 <div className="row mb-3 mb-sm-auto px-2">
                     <button className="btn btn-lg btn-primary"
-                            onClick={() => this.props.setContactMeModalVisible(true)}>
+                            onClick={() => this.props.setContactMeModalVisible(true)}
+                            onKeyDown={event => this.handleKeyDown(event)}>
                         Lets Get In Touch
                     </button>
                     <ContactMeModal/>

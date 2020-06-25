@@ -13,6 +13,12 @@ import {ALL_PROJECTS, LARGE_PROJECTS, SMALL_PROJECTS} from "../../resources/filt
 
 class ProjectGrid extends Component{
 
+    handleKeyDown(event) {
+        if (event.keyCode === 27) { // escape key
+            this.props.setProjectsModalVisible(false);
+        }
+    }
+
     moreInfoButtonClick(project) {
         this.props.setSelectedProject(project);
         this.props.setProjectsModalVisible(true);
@@ -55,7 +61,8 @@ class ProjectGrid extends Component{
                                             Try Demo
                                         </button>
                                         <button className="btn btn-info"
-                                                onClick={() => this.moreInfoButtonClick(project)}>
+                                                onClick={() => this.moreInfoButtonClick(project)}
+                                                onKeyDown={event => this.handleKeyDown(event)}>
                                             More Info
                                         </button>
                                     </div>
