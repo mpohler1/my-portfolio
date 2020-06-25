@@ -1,7 +1,22 @@
-const apiURL = "http://192.168.1.69:9000";
+const API_URL = "http://192.168.1.69:9000";
+const TIME_OUT_TIME = 3000;
 
 export function sendMail(name, email, body) {
-    const endpoint = apiURL + "/mail/send";
+    return Promise.race([
+        postMail(name, email, body),
+        timeOut(TIME_OUT_TIME)
+    ])
+}
+
+function timeOut(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms))
+        .then(() => Promise.all([
+            {status: 408}
+        ]));
+}
+
+function postMail(name, email, body) {
+    const endpoint = API_URL + "/mail/send";
     const headers = {
         'content-type': 'application/json'
     };
@@ -15,7 +30,8 @@ export function sendMail(name, email, body) {
         headers: headers,
         body: JSON.stringify(mailModel)
     }).then(response => Promise.all([
-        response,
-        response.json()
+        response
+    ])).catch((error) => Promise.all([
+        {status: 503}
     ]));
 }

@@ -49,21 +49,15 @@ export const sendMailRequest = () => (
     }
 );
 
-export const sendMailSuccess = responseMessage => (
+export const sendMailSuccess = () => (
     {
-        type: SEND_MAIL_SUCCESS,
-        payload: {
-            responseMessage: responseMessage
-        }
+        type: SEND_MAIL_SUCCESS
     }
 );
 
-export const sendMailFailure = responseMessage => (
+export const sendMailFailure = () => (
     {
-        type: SEND_MAIL_FAILURE,
-        payload: {
-            responseMessage: responseMessage
-        }
+        type: SEND_MAIL_FAILURE
     }
 );
 

@@ -38,12 +38,12 @@ class ContactMeForm extends Component {
 
     sendMail() {
         this.props.sendMailRequest();
-        sendMail(this.props.name, this.props.email, this.props.body).then(([response, json]) => {
+        sendMail(this.props.name, this.props.email, this.props.body).then(([response]) => {
             if (response.status === 200) {
-                this.props.sendMailSuccess(json);
+                this.props.sendMailSuccess();
                 this.props.setContactMeModalVisible(false);
             } else {
-                this.props.sendMailFailure(json);
+                this.props.sendMailFailure();
             }
         })
     }

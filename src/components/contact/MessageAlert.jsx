@@ -2,9 +2,12 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {FAILURE, SUCCESS} from "../../resources/mailModes";
 import {resetMailMode} from "../../actions/actions";
+import {contactInfo} from "../../resources/contactInfo";
 
-const classNameForSuccess = "alert alert-bottom alert-success alert-dismissible show m-4";
-const classNameForFailure = "alert alert-bottom alert-danger alert-dismissible show m-4";
+const CLASS_NAME_FOR_SUCCESS = "alert alert-bottom alert-success alert-dismissible show m-4";
+const CLASS_NAME_FOR_FAILURE = "alert alert-bottom alert-danger alert-dismissible show m-4";
+const SUCCESS_RESPONSE = "";
+const FAILURE_RESPONSE = "Please email me directly at " + contactInfo.email;
 
 class MessageAlert extends Component {
 
@@ -13,8 +16,8 @@ class MessageAlert extends Component {
             <React.Fragment>
                 {
                     (this.props.mode === SUCCESS || this.props.mode === FAILURE) &&
-                        <div className="fixed-bottom center">
-                            <div className={this.props.mode === SUCCESS ? classNameForSuccess : classNameForFailure} role="alert">
+                        <div className="message-alert center">
+                            <div className={this.props.mode === SUCCESS ? CLASS_NAME_FOR_SUCCESS : CLASS_NAME_FOR_FAILURE} role="alert">
                                 <h4 className="alert-heading">
                                     {this.props.mode === SUCCESS ? "Message Sent Successfully!" : "Message Failed To Send"}
                                 </h4>
@@ -23,7 +26,7 @@ class MessageAlert extends Component {
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                                 <p>
-                                    {this.props.response}
+                                    {this.props.mode === SUCCESS ? SUCCESS_RESPONSE : FAILURE_RESPONSE}
                                 </p>
                             </div>
                         </div>
@@ -36,7 +39,6 @@ class MessageAlert extends Component {
 const mapStateToProps = state => {
     return {
         mode: state.mail.mode,
-        response: state.mail.response
     };
 };
 

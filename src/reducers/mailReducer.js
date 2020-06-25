@@ -10,14 +10,12 @@ function mailReducer(state = {response: "", mode: NONE}, action) {
 
         case SEND_MAIL_SUCCESS:
             return Object.assign({}, state, {
-                mode: SUCCESS,
-                response: action.payload.response
+                mode: SUCCESS
             });
 
         case SEND_MAIL_FAILURE:
             return Object.assign({}, state, {
-                mode: FAILURE,
-                response: action.payload.response
+                mode: FAILURE
             });
 
         case RESET_MAIL_MODE:
