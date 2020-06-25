@@ -4,6 +4,7 @@ import ContactMeModal from "./ContactMeModal";
 import {setContactMeModalVisible} from "../../actions/actions";
 import {connect} from "react-redux";
 import {contactInfo} from "../../resources/contactInfo";
+import MessageAlert from "./MessageAlert";
 
 class ContactMe extends Component {
 
@@ -28,6 +29,7 @@ class ContactMe extends Component {
                         Lets Get In Touch
                     </button>
                     <ContactMeModal/>
+                    <MessageAlert/>
                 </div>
                 <div className="row mb-3 mb-sm-auto px-2">
                     <p className="text-white-50 text-center">

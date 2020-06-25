@@ -10,7 +10,7 @@ import {
     SET_PROJECTS_MODAL_VISIBLE,
     SET_PROJECT_HOVERED,
     SET_SELECTED_PROJECT,
-    SET_CONTACT_ME_MODAL_VISIBLE, SET_EMAIL, SET_NAME, SET_BODY, SET_ERRORS, SET_DRAWER_OPEN
+    SET_CONTACT_ME_MODAL_VISIBLE, SET_EMAIL, SET_NAME, SET_BODY, SET_ERRORS, SET_DRAWER_OPEN, RESET_MAIL_MODE
 } from "./actionTypes";
 
 export const setBackgroundOpacity = backgroundOpacity => (
@@ -64,6 +64,12 @@ export const sendMailFailure = responseMessage => (
         payload: {
             responseMessage: responseMessage
         }
+    }
+);
+
+export const resetMailMode = () => (
+    {
+        type: RESET_MAIL_MODE
     }
 );
 

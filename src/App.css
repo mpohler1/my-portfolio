@@ -53,6 +53,11 @@
     max-width: 1400px;
 }
 
+.alert-bottom {
+    position: relative;
+    top: -5rem;
+}
+
 .modal-shadow {
     top: 0;
     left: 0;
