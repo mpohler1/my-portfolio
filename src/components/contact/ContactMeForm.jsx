@@ -13,6 +13,7 @@ import {connect} from "react-redux";
 import validate from "validate.js";
 import {CONSTRAINTS} from "../../resources/constraints";
 import {sendMail} from "../../service/mailService";
+import {SENDING} from "../../resources/mailModes";
 
 class ContactMeForm extends Component {
 
@@ -40,6 +41,7 @@ class ContactMeForm extends Component {
         sendMail(this.props.name, this.props.email, this.props.body).then(([response, json]) => {
             if (response.status === 200) {
                 this.props.sendMailSuccess(json);
+                this.props.setContactMeModalVisible(false);
             } else {
                 this.props.sendMailFailure(json);
             }
@@ -87,9 +89,9 @@ class ContactMeForm extends Component {
                                     {" "}{this.props.errors.body}
                                 </span>
                             </label>
-                            <textarea className="form-control overflow-auto message-body"
+                            <textarea className="form-control overflow-auto"
                                       id="body"
-                                      cols="15"
+                                      rows="7"
                                       placeholder="Message Body"
                                       value={this.props.body}
                                       onChange={event => this.props.setBody(event.target.value)}/>
@@ -98,10 +100,20 @@ class ContactMeForm extends Component {
                 </div>
                 <div className="row">
                     <div>
-                    <button className="btn btn-primary ml-1"
-                            onClick={() => this.handleSendButtonClick()}>
-                        Send
-                    </button>
+                        {
+                            this.props.mode === SENDING
+                                ?
+                                    <button className="btn btn-primary ml-1 disabled">
+                                        <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"/>
+                                        {" "}Sending...
+                                    </button>
+                                :
+                                    <button className="btn btn-primary ml-1"
+                                            onClick={() => this.handleSendButtonClick()}>
+                                        Send
+                                    </button>
+                        }
+
                     <button className="btn btn-secondary ml-3 mr-1"
                             onClick={() => this.props.setContactMeModalVisible(false)}>
                         Cancel
@@ -118,7 +130,8 @@ const mapStateToProps = state => {
         name: state.contactMe.name,
         email: state.contactMe.email,
         body: state.contactMe.body,
-        errors: state.contactMe.errors
+        errors: state.contactMe.errors,
+        mode: state.mail.mode
     };
 };
 

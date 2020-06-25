@@ -62,10 +62,6 @@
     background-color: rgba(0, 0, 0, 0.35);
 }
 
-.message-body {
-    min-height: 15rem;
-}
-
 .project-box {
     width: 100%;
     padding-bottom: 56.25%;
