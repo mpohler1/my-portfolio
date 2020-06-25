@@ -2,7 +2,7 @@ import {
     FETCH_PROJECTS_SUCCESS, SET_FILTER_MODE,
     SET_PROJECTS_MODAL_VISIBLE,
     SET_PROJECT_HOVERED,
-    SET_SELECTED_PROJECT
+    SET_SELECTED_PROJECT, FETCH_PROJECTS_FAILURE
 } from "../actions/actionTypes";
 import {ALL_PROJECTS} from "../resources/filterModes";
 
@@ -10,15 +10,22 @@ function projectsReducer(state = {
     projects: [],
     selectedProject: {},
     modalVisible: false,
-    filterMode: ALL_PROJECTS
+    filterMode: ALL_PROJECTS,
+    error: false
 }, action) {
     switch (action.type) {
+        case FETCH_PROJECTS_FAILURE:
+            return Object.assign({}, state, {
+                error: true
+            });
+
         case FETCH_PROJECTS_SUCCESS:
             return Object.assign({}, state, {
                 projects: action.payload.projects.map(project => {
                     project.hovered = false;
                     return project;
-                })
+                }),
+                error: false
             });
 
         case SET_PROJECT_HOVERED:

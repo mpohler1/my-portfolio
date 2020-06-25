@@ -1,7 +1,23 @@
-const apiURL = "http://192.168.1.69:1000";
+const API_URL = "http://192.168.1.69:1000";
+const TIME_OUT_TIME = 3000;
 
-export function fetchProjects() {
-    const endpoint = apiURL + "/projects";
+export function getProjects() {
+    return Promise.race([
+        fetchProjects(),
+        timeOut(TIME_OUT_TIME)
+    ])
+}
+
+function timeOut(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms))
+        .then(() => Promise.all([
+        {status: 408},
+        "time out"
+    ]));
+}
+
+function fetchProjects() {
+    const endpoint = API_URL + "/projects";
     const headers = {
         'content-type': 'application/json'
     };
@@ -11,5 +27,8 @@ export function fetchProjects() {
     }).then(response => Promise.all([
         response,
         response.json()
+    ])).catch((error) => Promise.all([
+        {status: 503},
+        "server is not available"
     ]));
 }

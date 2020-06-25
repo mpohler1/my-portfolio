@@ -8,7 +8,7 @@ import {
     setSelectedProject,
     setProjectsModalVisible
 } from "../../actions/actions";
-import {fetchProjects} from "../../service/projectsService";
+import {getProjects} from "../../service/projectsService";
 import {ALL_PROJECTS, LARGE_PROJECTS, SMALL_PROJECTS} from "../../resources/filterModes";
 
 class ProjectGrid extends Component{
@@ -26,7 +26,7 @@ class ProjectGrid extends Component{
 
     determineProjectList() {
         this.props.fetchProjectsRequest();
-        fetchProjects().then(([response, json]) => {
+        getProjects().then(([response, json]) => {
             if (response.status === 200) {
                 this.props.fetchProjectsSuccess(json);
             } else {
@@ -43,7 +43,8 @@ class ProjectGrid extends Component{
         return (
             <div className="container-fluid p-0 m-0">
                 <div className="row row-cols-1 row-cols-md-2 row-cols-xl-3 p-0 m-0">
-                    {this.props.projects.map(project => (
+                    {
+                        this.props.projects.map(project => (
                         <div className="col p-2">
                             <div className="project-box rounded"
                                  onMouseOver={() => this.props.setProjectHovered(project, true)}
