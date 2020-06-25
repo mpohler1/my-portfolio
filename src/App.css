@@ -85,3 +85,7 @@
 .nav-link {
     outline: none !important;
 }
+
+.btn-link {
+    cursor: pointer;
+}

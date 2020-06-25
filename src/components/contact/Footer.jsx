@@ -23,12 +23,14 @@ class Footer extends Component{
                                 <p>
                                     {contactInfo.name}<br/>
                                     {contactInfo.email}<br/>
-                                    <a className="text-white" href={contactInfo.linkedIn}>
+                                    <span className="text-white btn-link"
+                                          onClick={() => window.open(contactInfo.linkedIn)}>
                                         LinkedIn
-                                    </a><br/>
-                                    <a className="text-white" href={contactInfo.gitHub}>
+                                    </span><br/>
+                                    <span className="text-white btn-link"
+                                          onClick={() => window.open(contactInfo.gitHub)}>
                                         GitHub
-                                    </a>
+                                    </span>
                                 </p>
                             </div>
                         </div>
@@ -96,7 +98,12 @@ class Footer extends Component{
                             <div className="col px-0 px-sm-3">
                                 <p>
                                     This website was developed by Mason Pohler using JavaScript, JSX, and CSS. This website was
-                                    built using ReactJS, Redux, and Bootstrap. <a className="text-white" href="https://github.com/mpohler1/mpohler1.github.io">View Source</a>
+                                    built using ReactJS, Redux, and Bootstrap.
+                                    {" "}
+                                    <span className="text-white btn-link"
+                                          onClick={() => window.open("https://github.com/mpohler1/mpohler1.github.io")}>
+                                        View Source
+                                    </span>
                                 </p>
                             </div>
                         </div>
@@ -111,10 +118,10 @@ class Footer extends Component{
                                 </p>
                             </div>
                             <div className="col text-right text-nowrap pt-2 float-right pr-0 pr-sm-3">
-                                <a className="btn btn-link text-white-50 text-nowrap p-0 float-right"
-                                   href={PRIVACY_POLICY_URL}>
+                                <span className="btn-link text-white-50 text-nowrap p-0 float-right"
+                                   onClick={() => window.open(PRIVACY_POLICY_URL)}>
                                     Privacy Policy
-                                </a>
+                                </span>
                             </div>
                         </div>
                     </div>
