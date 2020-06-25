@@ -1,4 +1,4 @@
-const API_URL = "http://192.168.1.69:1000";
+const API_URL = "https://api.masonpohler.com:1000";
 const TIME_OUT_TIME = 3000;
 
 export function getProjects() {
