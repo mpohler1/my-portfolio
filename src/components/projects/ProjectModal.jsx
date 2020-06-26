@@ -12,7 +12,7 @@ class ProjectModal extends Component {
                     <div className="modal d-block text-dark" role="dialog">
                         <div className="modal-shadow"
                              onClick={() => this.props.setProjectsModalVisible(false)}/>
-                        <div className="modal-dialog modal-dialog-centered">
+                        <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                             <div className="modal-content">
                                 <div className="modal-header">
                                     <h3>
@@ -25,7 +25,11 @@ class ProjectModal extends Component {
                                 </div>
                                 <div className="modal-body">
                                     <p>
-                                        {this.props.project.detailedDescription}
+                                        {this.props.project.detailedDescription.split("\r\n").map(paragraph => (
+                                            <React.Fragment>
+                                                {paragraph}<br/>
+                                            </React.Fragment>
+                                        ))}
                                     </p>
                                 </div>
                                 <div className="modal-footer">
