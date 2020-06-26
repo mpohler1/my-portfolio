@@ -101,7 +101,7 @@ class Footer extends Component{
                                     built using ReactJS, Redux, and Bootstrap.
                                     {" "}
                                     <span className="text-white btn-link"
-                                          onClick={() => window.open("https://github.com/mpohler1/mpohler1.github.io")}>
+                                          onClick={() => window.open("https://github.com/mpohler1/my-portfolio")}>
                                         View Source
                                     </span>
                                 </p>
